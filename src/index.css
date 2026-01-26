@@ -1,0 +1,68 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+/* Configure custom design tokens for Tailwind v4 */
+@theme {
+  /* Typography */
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Core palette */
+  --color-primary: #4b2bee;
+  --color-accent-tangerine: #ff8c42;
+  --color-background-light: #faf7f5;
+  --color-background-dark: #131022;
+  --color-lavender-soft: #e6e6fa;
+
+  /* Warm neutrals */
+  --color-warm-white: #faf7f5;
+  --color-chocolate: #2c1810;
+  --color-cream: #f5f0ed;
+  --color-lavender-tint: #e8e4f3;
+
+  /* Lavender accents */
+  --color-lavender: #8b7fc8;
+  --color-lavender-light: #a89fd8;
+  --color-lavender-dark: #6b5fa8;
+
+  /* Greens */
+  --color-green: #5cb894;
+  --color-green-light: #7cc8a8;
+  --color-green-dark: #4a9874;
+
+  /* CTA color */
+  --color-tangerine: #ff8c42;
+  --color-golden: #f39c12;
+  --color-tangerine-dark: #c66a1a;
+
+  /* Dark mode */
+  --color-navy-black: #0f0e13;
+  --color-surface-dark: #1a1825;
+  --color-card-dark: #252235;
+
+  /* Semantic */
+  --color-success: #5cb894;
+  --color-warning: #f39c12;
+  --color-error: #e74c3c;
+  --color-info: #8b7fc8;
+
+  /* Radii */
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  --shadow-neo: 5px 5px 10px #d1cfcd, -5px -5px 10px #ffffff;
+  --shadow-neo-dark: 5px 5px 10px #0b0913, -5px -5px 10px #1b1731;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
