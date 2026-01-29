@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import AboutMeSection from './components/AboutMeSection'
 import MainSection from './components/MainSection'
 import NavBar from './components/NavBar'
+import ProjectsSection from './components/ProjectsSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +10,9 @@ function App() {
   return (
     <>
       <NavBar />
-      <MainSection></MainSection>
+      <MainSection />
+      <AboutMeSection />
+      <ProjectsSection />
     </>
   )
 }
