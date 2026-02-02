@@ -3,8 +3,8 @@ import Logo from '../assets/logo.png'
 
 export default function AboutMeSection() {
     return (
-        <section className='py-24 px-8'>
-            <div className="max-w-8xl w-full mx-auto flex items-center justify-center gap-12">
+        <section id='about' className='py-24 px-8'>
+            <div className="max-w-6xl mx-auto flex items-center justify-center gap-12">
                 <div className="relative">
                     <img src={Logo} alt="Daniel" className="w-48 h-48 rounded-full object-cover ring-8 ring-white shadow-lg" />
                 </div>
