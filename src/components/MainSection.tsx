@@ -14,11 +14,11 @@ export default function MainSection() {
                         <AvailableForWork />
 
                         <div className="space-y-6">
-                            <h1 className="flex flex-col font-display font-semibold text-8xl leading-none gap-0">
+                            <h1 className="flex flex-col font-display font-bold text-8xl leading-none gap-0 tracking-tight">
                                 <span className="text-chocolate">Daniel</span>
-                                <span className="text-primary">Villamizar</span>
+                                <span className="bg-linear-to-r from-primary via-lavender to-primary bg-clip-text text-transparent">Villamizar</span>
                             </h1>
-                            <p className="max-w-xl text-xl text-chocolate/70">
+                            <p className="max-w-xl text-xl text-chocolate/80 font-medium leading-relaxed">
                                 Software Developer crafting scalable, high-impact digital experiences with precision and modern tech.
                             </p>
                         </div>

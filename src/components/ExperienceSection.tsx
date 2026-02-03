@@ -3,10 +3,10 @@ import { WORK_EXPERIENCES } from "../utils/experience";
 export default function ExperienceSection() {
     return (
         <section id='experience' className="py-20 px-8 max-w-7xl mx-auto">
-            <h1 className="font-bold text-3xl pb-16 text-stone-900">Work Experience</h1>
+            <h1 className="font-bold text-4xl pb-16 text-chocolate tracking-tight">Work Experience</h1>
             <div className="relative">
                 {/* Vertical timeline line */}
-                <div className="absolute left-0 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-linear-to-b from-stone-300 via-stone-400 to-stone-300"></div>
+                <div className="absolute left-0 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-linear-to-b from-lavender/30 via-lavender to-lavender/30"></div>
 
                 {WORK_EXPERIENCES.map((experience, index) => {
                     const isEven = index % 2 === 0;
@@ -16,28 +16,28 @@ export default function ExperienceSection() {
                             className={`relative flex flex-col md:flex-row gap-8 pb-16 ${isEven ? 'md:flex-row-reverse' : ''}`}
                         >
                             {/* Timeline dot */}
-                            <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-stone-900 border-4 border-white rounded-full shadow-lg ring-4 ring-stone-100 z-10"></div>
+                            <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-primary border-4 border-white rounded-full shadow-lg ring-4 ring-lavender-soft z-10"></div>
 
                             {/* Spacer for desktop */}
                             <div className="hidden md:block md:w-1/2"></div>
 
                             {/* Content card */}
                             <div className={`md:w-1/2 ml-8 md:ml-0 ${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
-                                <div className="bg-white border border-stone-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <div className="bg-white border-2 border-lavender-soft rounded-xl p-6 shadow-lg hover:shadow-xl hover:border-lavender transition-all duration-300">
                                     <div className="flex flex-col gap-4">
                                         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                                            <h2 className="text-xl font-bold text-stone-900">{experience.role}</h2>
-                                            <span className="text-sm font-medium text-stone-500 bg-stone-100 px-3 py-1 rounded-full whitespace-nowrap self-start">
+                                            <h2 className="text-xl font-bold text-chocolate">{experience.role}</h2>
+                                            <span className="text-sm font-semibold text-lavender-dark bg-lavender-soft px-3 py-1.5 rounded-full whitespace-nowrap self-start">
                                                 {experience.startDate.getFullYear()}{experience.endDate != null ? ` - ${experience.endDate.getFullYear()}` : ' - Present'}
                                             </span>
                                         </div>
 
-                                        <h3 className="text-base font-semibold text-stone-600">{experience.company}</h3>
+                                        <h3 className="text-base font-semibold text-primary">{experience.company}</h3>
 
                                         <ul className="space-y-2 text-sm">
                                             {experience.description.map((point, pointIndex) => (
-                                                <li key={pointIndex} className="flex gap-2 text-stone-700">
-                                                    <span className="text-stone-400 mt-1">•</span>
+                                                <li key={pointIndex} className="flex gap-2 text-chocolate/70 leading-relaxed">
+                                                    <span className="text-lavender mt-1">•</span>
                                                     <span>{point}</span>
                                                 </li>
                                             ))}
@@ -47,7 +47,7 @@ export default function ExperienceSection() {
                                             {experience.technologies.map((technology) => (
                                                 <span
                                                     key={technology}
-                                                    className="px-3 py-1 text-xs font-medium bg-stone-100 text-stone-700 rounded-full hover:bg-stone-200 transition-colors"
+                                                    className="px-3 py-1.5 text-xs font-semibold bg-lavender-soft text-lavender-dark rounded-full hover:bg-lavender hover:text-white transition-all duration-200"
                                                 >
                                                     {technology}
                                                 </span>

@@ -12,14 +12,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         alt={project.name}
         className='w-full h-auto object-cover'
       />
-      <div className='p-4 flex flex-col bg-white gap-2'>
-        <div className='inline-flex gap-2' >
+      <div className='p-5 flex flex-col bg-white gap-3 hover:shadow-lg transition-shadow duration-300'>
+        <div className='inline-flex gap-2 flex-wrap' >
           {project.technologies.map((technology) => {
-            return <div className='text-xs bg-gray-200 rounded-full px-2 py-1'>{technology}</div>
+            return <div className='text-xs font-medium bg-lavender-soft text-lavender-dark rounded-full px-3 py-1'>{technology}</div>
           })}
         </div>
-        <h1 className='font-bold font-mono'>{project.name}</h1>
-        <p className='text-sm'>{project.description}</p>
+        <h1 className='font-bold font-mono text-lg text-chocolate'>{project.name}</h1>
+        <p className='text-sm text-chocolate/70 leading-relaxed'>{project.description}</p>
       </div>
     </div>
   )

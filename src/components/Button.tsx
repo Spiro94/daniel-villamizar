@@ -13,12 +13,12 @@ export default function Button({ children,
     type = 'primary',
     disabled = false,
 }: ButtonProps) {
-    let style = 'inline-flex items-center gap-2 px-5 py-3 rounded-full cursor-pointer shadow-[0_8px_24px_rgba(15,14,19,0.18)] transition hover:translate-y-px hover:shadow-[0_12px_32px_rgba(15,14,19,0.22)] '
+    let style = 'inline-flex items-center gap-2 px-6 py-3 rounded-full cursor-pointer font-semibold shadow-[0_8px_24px_rgba(15,14,19,0.18)] transition-all duration-200 hover:scale-105 hover:shadow-[0_12px_32px_rgba(15,14,19,0.22)] '
     if (type === 'primary') {
         style += 'bg-tangerine hover:bg-golden text-white'
     }
     else if (type === 'secondary') {
-        style += 'bg-gray-900 hover:bg-gray-800 text-white'
+        style += 'bg-chocolate hover:bg-chocolate/90 text-white'
     }
     else {
         style += '';

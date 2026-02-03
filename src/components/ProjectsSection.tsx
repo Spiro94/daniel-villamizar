@@ -8,8 +8,8 @@ export default function ProjectsSection() {
         <section id='projects' className='py-20 px-6 bg-linear-to-br from-background-light via-white to-lavender-soft text-chocolate'>
             <div className='max-w-6xl mx-auto'>
                 <div className='flex justify-between items-center'>
-                    <h1 className='font-bold text-2xl'>Featured Projects</h1>
-                    <button onClick={() => window.open(APP_CONSTANTS.githubUrl)} className='inline-flex gap-2 text-tangerine hover:text-golden cursor-pointer text-sm'>View GitHub <ExternalLinkIcon className='w-5 h-5' /> </button>
+                    <h1 className='font-bold text-4xl text-chocolate tracking-tight'>Featured Projects</h1>
+                    <button onClick={() => window.open(APP_CONSTANTS.githubUrl)} className='inline-flex gap-2 text-tangerine hover:text-golden cursor-pointer text-sm font-semibold transition-all duration-200 hover:scale-105'>View GitHub <ExternalLinkIcon className='w-5 h-5' /> </button>
                 </div>
                 <div className='grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 pt-12 gap-6'>
                     {
