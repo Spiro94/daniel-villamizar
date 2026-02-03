@@ -1,21 +1,20 @@
 
 import { ArrowRight } from 'lucide-react'
+import Daniel from '../assets/daniel.jpeg'
 import AvailableForWork from './AvailableForWork'
 import Button from './Button'
-
-const heroImage = 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80'
 
 export default function MainSection() {
     return (
         <section id='home'>
             <main className="relative isolate min-h-screen bg-linear-to-br from-background-light via-white to-lavender-soft text-chocolate">
                 <div className="min-h-screen justify-center mx-auto flex max-w-6xl gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-20 pt-20 sm:pt-32 flex-col lg:flex-row items-center">
-                    <div className="flex-1 space-y-6 sm:space-y-8 text-center lg:text-left">
+                    <div className="flex-1 space-y-12 sm:space-y-16 text-center lg:text-left">
                         <div className="flex justify-center lg:justify-start">
                             <AvailableForWork />
                         </div>
 
-                        <div className="space-y-4 sm:space-y-6">
+                        <div className="space-y-8 sm:space-y-10">
                             <h1 className="flex flex-col font-display font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none gap-0 tracking-tight">
                                 <span className="text-chocolate">Daniel</span>
                                 <span className="bg-linear-to-r from-primary via-lavender to-primary bg-clip-text text-transparent">Villamizar</span>
@@ -35,7 +34,7 @@ export default function MainSection() {
 
                     <div className="relative flex-1 w-full max-w-md lg:max-w-none">
                         <div className="relative mx-auto aspect-4/5 w-full max-w-72 sm:max-w-80 md:max-w-96 lg:max-w-130 rotate-3 overflow-hidden rounded-3xl bg-linear-to-br from-primary/10 via-white to-primary/5 shadow-[0_20px_60px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
-                            <img src={heroImage} alt="Abstract 3D art" className="w-full h-full object-cover" />
+                            <img src={Daniel} alt="Daniel Villamizar" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
