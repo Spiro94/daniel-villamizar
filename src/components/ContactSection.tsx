@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
 import Button from "./Button";
 import { siGithub } from 'simple-icons';
+import { FaLinkedin } from "react-icons/fa";
 import CV from '../assets/Daniel Villamizar CV.pdf';
 
 export default function ContactSection() {
@@ -53,15 +54,7 @@ export default function ContactSection() {
                         className="group flex items-center gap-2 text-chocolate/70 hover:text-[#0A66C2] transition-colors"
                         aria-label="LinkedIn Profile"
                     >
-                        <svg
-                            role="img"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-8 h-8 fill-current group-hover:scale-110 transition-transform"
-                        >
-                            <title>LinkedIn</title>
-                            {/* <path d={siLinkedin.path} /> */}
-                        </svg>
+                        <FaLinkedin className="w-8 h-8 fill-current group-hover:scale-110 transition-transform" />
                         <span className="font-medium">LinkedIn</span>
                     </a>
                 </div>
