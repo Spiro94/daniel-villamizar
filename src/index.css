@@ -81,3 +81,19 @@
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(75, 43, 238, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(75, 43, 238, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(75, 43, 238, 0);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite;
+}
