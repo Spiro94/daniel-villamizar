@@ -9,7 +9,7 @@ import TechToolsSection from './components/TechToolsSection'
 function App() {
 
   return (
-    <html className='scroll-smooth'>
+    <div className='scroll-smooth'>
       <NavBar />
       <MainSection />
       <AboutMeSection />
@@ -17,7 +17,7 @@ function App() {
       <TechToolsSection />
       <ExperienceSection />
       <ContactSection />
-    </html>
+    </div>
   )
 }
 

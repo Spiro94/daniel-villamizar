@@ -14,10 +14,10 @@ export default function AboutMeSection() {
                         <h1 className="text-3xl font-bold text-chocolate tracking-tight">About Me</h1>
                     </div>
                     <p className='text-chocolate/70 max-w-prose text-lg leading-relaxed'>
-                        Hi, I'm <strong className="text-chocolate font-semibold">Daniel</strong>. I am a passionate developer focused on creating high-impact digital solutions. With a background in both design and engineering, I specialize in building applications that are not just functional but also delightful to use.
+                        Hi, I'm <strong className="text-chocolate font-semibold">Daniel</strong>. I am a passionate Senior Flutter Developer focused on creating high-impact mobile solutions for iOS and Android. With over 6 years of software development experience spanning mobile, web, and enterprise applications, I specialize in architecting scalable applications that deliver exceptional user experiences.
                     </p>
                     <p className='text-chocolate/70 max-w-prose text-lg leading-relaxed'>
-                        My philosophy is simple: write clean code, solve real problems, and never stop learning. Currently specializing in <span className="text-primary font-medium">React, Node.js, and cloud architecture</span>.
+                        My philosophy is simple: write clean code, solve real problems, and never stop learning. Currently specializing in <span className="text-primary font-medium">Flutter, Dart, mobile architecture, and cloud integrations</span> with expertise in AI integration, design systems, and cross-platform development.
                     </p>
                 </div>
             </div>
