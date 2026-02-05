@@ -3,6 +3,7 @@ import Button from "./Button";
 import { siGithub } from 'simple-icons';
 import { FaLinkedin } from "react-icons/fa";
 import CV from '../assets/Daniel Villamizar CV.pdf';
+import { APP_CONSTANTS } from "../utils/constants";
 
 export default function ContactSection() {
     return (
@@ -23,13 +24,13 @@ export default function ContactSection() {
                 >
                     <Mail className="text-primary group-hover:scale-110 transition-transform" size={24} />
                     <span className="underline decoration-primary/30 hover:decoration-primary">
-                        danieljosevillamizar@gmail.com
+                        {APP_CONSTANTS.email}
                     </span>
                 </a>
 
                 <div className="flex gap-6 items-center">
                     <a
-                        href="https://github.com/danielvillamizar"
+                        href={APP_CONSTANTS.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center gap-2 text-chocolate/70 hover:text-chocolate transition-colors"
@@ -48,7 +49,7 @@ export default function ContactSection() {
                     </a>
 
                     <a
-                        href="https://linkedin.com/in/danielvillamizar"
+                        href={APP_CONSTANTS.linkedInUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center gap-2 text-chocolate/70 hover:text-[#0A66C2] transition-colors"

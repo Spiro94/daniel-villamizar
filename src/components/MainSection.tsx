@@ -5,6 +5,12 @@ import AvailableForWork from './AvailableForWork'
 import Button from './Button'
 
 export default function MainSection() {
+
+    const handleScrollTo = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <section id='home'>
             <main className="relative isolate min-h-screen bg-linear-to-br from-background-light via-white to-lavender-soft text-chocolate">
@@ -25,10 +31,10 @@ export default function MainSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
-                            <Button type='secondary'>
+                            <Button type='secondary' onClick={() => handleScrollTo('projects')}>
                                 View Work
                             </Button>
-                            <Button type='primary'>Contact Me <ArrowRight className="h-4 w-4" /></Button>
+                            <Button type='primary' onClick={() => handleScrollTo('contact')} >Contact Me <ArrowRight className="h-4 w-4" /></Button>
                         </div>
                     </div>
 
