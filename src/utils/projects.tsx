@@ -2,7 +2,7 @@ import AhorroALaMano from '../assets/a-la-mano.jpg'
 import Citamente from '../assets/citamente.png'
 import HabitHeroes from '../assets/habit-heroes.png'
 import Leal from '../assets/leal.png'
-import Yohana from '../assets/yohana.jpg'
+import Yohana from '../assets/panasonic.jpg'
 
 
 interface Project {

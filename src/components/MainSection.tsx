@@ -1,6 +1,6 @@
 
 import { ArrowRight } from 'lucide-react'
-import Daniel from '../assets/daniel.jpeg'
+import Daniel from '../assets/daniel.png'
 import AvailableForWork from './AvailableForWork'
 import Button from './Button'
 
