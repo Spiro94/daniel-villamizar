@@ -26,7 +26,7 @@ export default function MainSection() {
                                 <span className="bg-linear-to-r from-primary via-lavender to-primary bg-clip-text text-transparent">Villamizar</span>
                             </h1>
                             <p className="max-w-xl mx-auto lg:mx-0 text-base sm:text-lg lg:text-xl text-chocolate/80 font-medium leading-relaxed">
-                                Senior Flutter Developer crafting exceptional mobile experiences for iOS and Android with 6+ years of expertise in scalable architecture and AI integration.
+                                Fullstack Developer with 8+ years of experience. Extensive Flutter expertise for iOS and Android, strong React/TypeScript skills, and .NET backend experience — building scalable products from mobile to web.
                             </p>
                         </div>
 

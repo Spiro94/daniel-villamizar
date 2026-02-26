@@ -14,10 +14,16 @@ interface Project {
 
 const PROJECTS: Project[] = [
     {
-        name: "Yohana",
+        name: "Yohana (Panasonic)",
         thumbnail: Yohana,
         technologies: ["Flutter", "Dart", "Android", "iOS", "Open AI", "Claude", "ADK", "Google Cloud"],
         description: "Next-generation family concierge service app that supports busy families with a dedicated team of professionals, helping manage daily to-dos from meal planning to travel arrangements"
+    },
+    {
+        name: "Ahorro a la Mano (Bancolombia)",
+        thumbnail: AhorroALaMano,
+        technologies: ["Flutter", "Dart", "Firebase", "iOS", "Android"],
+        description: "Bancolombia's mobile-first low-amount savings account app with no maintenance fees, enabling users to manage finances, pay bills, transfer money, and receive salary deposits entirely from their phone"
     },
     {
         name: "Habit Heroes",
@@ -36,12 +42,6 @@ const PROJECTS: Project[] = [
         thumbnail: Leal,
         technologies: ["Flutter", "Dart", "Firebase", "iOS", "Android"],
         description: "Loyalty rewards platform where users earn points and cashback from purchases at physical stores, redeemable for prizes and discounts"
-    },
-    {
-        name: "Ahorro a la Mano",
-        thumbnail: AhorroALaMano,
-        technologies: ["Flutter", "Dart", "Firebase", "iOS", "Android"],
-        description: "Bancolombia's mobile-first low-amount savings account app with no maintenance fees, enabling users to manage finances, pay bills, transfer money, and receive salary deposits entirely from their phone"
     }
 ];
 
