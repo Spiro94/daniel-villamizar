@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import MainSection from './components/MainSection'
 import NavBar from './components/NavBar'
 
@@ -23,6 +24,7 @@ function App() {
         <ContactSection />
       </Suspense>
       <Analytics />
+      <SpeedInsights />
     </div>
   )
 }
