@@ -12,6 +12,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           src={project.thumbnail}
           alt={project.name}
           className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-300'
+          loading='lazy'
+          decoding='async'
         />
       </div>
       <div className='p-6 flex flex-col gap-4'>

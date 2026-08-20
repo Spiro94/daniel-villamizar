@@ -9,18 +9,20 @@ interface Experience {
 
 export const WORK_EXPERIENCES: Experience[] = [
     {
-        role: "Senior Flutter Developer",
+        role: "Senior Fullstack Developer",
         company: "Gorilla Logic",
         startDate: new Date(2022, 0, 1),
         endDate: null,
         description: [
             "Architected and developed high-performance Flutter widgets for iOS and Android platforms, ensuring responsive design and seamless user experiences",
+            "Built a local-first core library in Rust, using Axum and Actix Web to expose a shared business-logic layer consumed consistently across platforms",
+            "Packaged the Rust core into cross-platform desktop apps with Tauri, keeping a single native-performance codebase in sync with the mobile clients",
             "Led cross-functional collaboration with product, design, and backend teams to align technical implementations with business objectives",
             "Implemented comprehensive testing and debugging strategies, reducing defects by maintaining quality standards pre-release",
             "Integrated complex backend services and APIs, establishing robust communication layers between mobile clients and server infrastructure",
             "Mentored and trained junior developers on Flutter best practices, code standards, and architectural patterns to elevate team technical excellence"
         ],
-        technologies: ["Flutter", "Dart", "iOS", "Android", "Open AI", "Claude", "ADK", "Google Cloud"]
+        technologies: ["Flutter", "Dart", "iOS", "Android", "Rust", "Axum", "Actix Web", "Tauri", "Open AI", "Claude", "ADK", "Google Cloud"]
     },
     {
         role: "Experienced Consultant",

@@ -1,6 +1,6 @@
 
 import { ArrowRight } from 'lucide-react'
-import Daniel from '../assets/daniel.png'
+import Daniel from '../assets/daniel.webp'
 import AvailableForWork from './AvailableForWork'
 import Button from './Button'
 
@@ -26,7 +26,7 @@ export default function MainSection() {
                                 <span className="bg-linear-to-r from-primary via-lavender to-primary bg-clip-text text-transparent">Villamizar</span>
                             </h1>
                             <p className="max-w-xl mx-auto lg:mx-0 text-base sm:text-lg lg:text-xl text-chocolate/80 font-medium leading-relaxed">
-                                Fullstack Developer with 8+ years of experience. Extensive Flutter expertise for iOS and Android, strong React/TypeScript skills, and .NET backend experience — building scalable products from mobile to web.
+                                Fullstack Developer with 8+ years of experience. Extensive Flutter expertise for iOS and Android, strong React/TypeScript skills, .NET backend experience, and Rust (Axum, Actix Web, Tauri) — building scalable products from mobile to web.
                             </p>
                         </div>
 
@@ -40,7 +40,15 @@ export default function MainSection() {
 
                     <div className="relative flex-1 w-full max-w-md lg:max-w-none">
                         <div className="relative mx-auto aspect-4/5 w-full max-w-72 sm:max-w-80 md:max-w-96 lg:max-w-130 rotate-3 overflow-hidden rounded-3xl bg-linear-to-br from-primary/10 via-white to-primary/5 shadow-[0_20px_60px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
-                            <img src={Daniel} alt="Daniel Villamizar" className="w-full h-full object-cover" />
+                            <img
+                                src={Daniel}
+                                alt="Daniel Villamizar"
+                                className="w-full h-full object-cover"
+                                width={1040}
+                                height={1560}
+                                loading="eager"
+                                fetchPriority="high"
+                            />
                         </div>
                     </div>
                 </div>

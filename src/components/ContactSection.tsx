@@ -1,7 +1,6 @@
 import { Mail } from "lucide-react";
 import Button from "./Button";
-import { siGithub } from 'simple-icons';
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import CV from '../assets/Daniel Villamizar CV.pdf';
 import { APP_CONSTANTS } from "../utils/constants";
 
@@ -36,15 +35,7 @@ export default function ContactSection() {
                         className="group flex items-center gap-2 text-chocolate/70 hover:text-chocolate transition-colors"
                         aria-label="GitHub Profile"
                     >
-                        <svg
-                            role="img"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-8 h-8 fill-current group-hover:scale-110 transition-transform"
-                        >
-                            <title>GitHub</title>
-                            <path d={siGithub.path} />
-                        </svg>
+                        <FaGithub className="w-8 h-8 fill-current group-hover:scale-110 transition-transform" />
                         <span className="font-medium">GitHub</span>
                     </a>
 
@@ -65,7 +56,7 @@ export default function ContactSection() {
                 <Button type="primary">Download CV</Button>
             </a>
 
-            <p className="text-chocolate/50 mt-8 font-medium">
+            <p className="text-chocolate/65 mt-8 font-medium">
                 &copy;{new Date().getFullYear()} Daniel Villamizar. All rights reserved.
             </p>
         </section>

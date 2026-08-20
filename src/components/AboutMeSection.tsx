@@ -1,8 +1,9 @@
-import { Code2, Database, Server, Smartphone, User } from 'lucide-react'
+import { Cog, Code2, Database, Server, Smartphone, User } from 'lucide-react'
 
 const skills = [
     { icon: Smartphone, label: 'Flutter & Dart', detail: 'iOS & Android' },
     { icon: Code2, label: 'React / TypeScript', detail: 'Web & Frontend' },
+    { icon: Cog, label: 'Rust', detail: 'Axum, Actix Web & Tauri' },
     { icon: Code2, label: '.NET / C#', detail: 'Backend & APIs' },
     { icon: Server, label: 'Node.js', detail: 'APIs & Services' },
     { icon: Database, label: 'Oracle / PostgreSQL', detail: 'Databases' },
@@ -28,6 +29,9 @@ export default function AboutMeSection() {
                     </p>
                     <p className='text-chocolate/70 max-w-prose text-base sm:text-lg leading-relaxed'>
                         My deepest expertise is in <span className="text-primary font-medium">Flutter</span>, where I've shipped production apps for iOS and Android — from architecture to App Store. I pair that with solid <span className="text-primary font-medium">React & TypeScript</span> skills for web, <span className="text-primary font-medium">Node.js</span> for fast and flexible APIs, and <span className="text-primary font-medium">.NET / C#</span> when the backend needs to be robust and scalable — all backed by experience with <span className="text-primary font-medium">Oracle and PostgreSQL</span> databases.
+                    </p>
+                    <p className='text-chocolate/70 max-w-prose text-base sm:text-lg leading-relaxed'>
+                        More recently at Gorilla Logic, I picked up <span className="text-primary font-medium">Rust</span>, building a local-first core library with <span className="text-primary font-medium">Axum</span> and <span className="text-primary font-medium">Actix Web</span> and packaging it into cross-platform desktop apps with <span className="text-primary font-medium">Tauri</span>.
                     </p>
                     <p className='text-chocolate/70 max-w-prose text-base sm:text-lg leading-relaxed'>
                         My approach is straightforward: write clean code, solve real problems, and deliver work that holds up over time.

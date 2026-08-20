@@ -1,10 +1,12 @@
-import AboutMeSection from './components/AboutMeSection'
-import ContactSection from './components/ContactSection'
-import ExperienceSection from './components/ExperienceSection'
+import { lazy, Suspense } from 'react'
 import MainSection from './components/MainSection'
 import NavBar from './components/NavBar'
-import ProjectsSection from './components/ProjectsSection'
-import TechToolsSection from './components/TechToolsSection'
+
+const AboutMeSection = lazy(() => import('./components/AboutMeSection'))
+const ProjectsSection = lazy(() => import('./components/ProjectsSection'))
+const TechToolsSection = lazy(() => import('./components/TechToolsSection'))
+const ExperienceSection = lazy(() => import('./components/ExperienceSection'))
+const ContactSection = lazy(() => import('./components/ContactSection'))
 
 function App() {
 
@@ -12,11 +14,13 @@ function App() {
     <div className='scroll-smooth'>
       <NavBar />
       <MainSection />
-      <AboutMeSection />
-      <ProjectsSection />
-      <TechToolsSection />
-      <ExperienceSection />
-      <ContactSection />
+      <Suspense fallback={null}>
+        <AboutMeSection />
+        <ProjectsSection />
+        <TechToolsSection />
+        <ExperienceSection />
+        <ContactSection />
+      </Suspense>
     </div>
   )
 }

@@ -1,8 +1,8 @@
-import AhorroALaMano from '../assets/a-la-mano.jpg'
-import Citamente from '../assets/citamente.png'
-import HabitHeroes from '../assets/habit-heroes.png'
-import Leal from '../assets/leal.png'
-import Yohana from '../assets/panasonic.jpg'
+import AhorroALaMano from '../assets/a-la-mano.webp'
+import Citamente from '../assets/citamente.webp'
+import HabitHeroes from '../assets/habit-heroes.webp'
+import Leal from '../assets/leal.webp'
+import Yohana from '../assets/panasonic.webp'
 
 
 interface Project {
