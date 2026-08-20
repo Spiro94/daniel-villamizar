@@ -1,4 +1,5 @@
 import { lazy, Suspense } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import MainSection from './components/MainSection'
 import NavBar from './components/NavBar'
 
@@ -21,6 +22,7 @@ function App() {
         <ExperienceSection />
         <ContactSection />
       </Suspense>
+      <Analytics />
     </div>
   )
 }
