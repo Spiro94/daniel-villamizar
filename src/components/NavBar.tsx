@@ -26,7 +26,8 @@ export default function NavBar() {
     const { t } = useLang();
 
     const links = [
-        ['apps', t.navWork],
+        ['projects', t.navWork],
+        ['apps', t.navApps],
         ['services', t.navServices],
         ['process', t.navProcess],
         ['experience', t.navExperience],

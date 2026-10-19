@@ -20,7 +20,7 @@ export const EXPERIENCE_HIGHLIGHTS: { icon: LucideIcon; title: L; description: L
     {
         icon: Users,
         title: { en: 'Leadership', es: 'Liderazgo' },
-        description: { en: 'Work side by side with product, design and backend teams, and mentor developers on architecture and best practices.', es: 'Trabajo de la mano con producto, diseño y backend, y soy mentor de otros desarrolladores en arquitectura y buenas prácticas.' },
+        description: { en: 'I work side by side with product, design and backend teams, and mentor developers on architecture and best practices.', es: 'Trabajo de la mano con producto, diseño y backend, y soy mentor de otros desarrolladores en arquitectura y buenas prácticas.' },
     },
 ]
 

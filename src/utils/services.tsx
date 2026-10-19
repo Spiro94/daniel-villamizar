@@ -14,7 +14,7 @@ export const SERVICES: Service[] = [
     {
         id: 'mobile', icon: Smartphone,
         title: { en: 'Mobile apps', es: 'Apps móviles' },
-        description: { en: 'One Flutter codebase, native-feeling apps for iOS and Android, published on both stores.', es: 'Un solo código en Flutter, apps con sensación nativa para iOS y Android, publicadas en ambas tiendas.' },
+        description: { en: 'One app for iPhone and Android, built once with Flutter and published on both stores.', es: 'Una sola app para iPhone y Android, construida una vez con Flutter y publicada en ambas tiendas.' },
     },
     {
         id: 'web', icon: Globe,
@@ -29,17 +29,17 @@ export const SERVICES: Service[] = [
     {
         id: 'ai', icon: Bot,
         title: { en: 'AI features', es: 'Funciones con IA' },
-        description: { en: 'Assistants, OCR, voice and agents built into your product by a Claude Certified Architect, with OpenAI or Claude.', es: 'Asistentes, OCR, voz y agentes integrados en tu producto por un Claude Certified Architect, con OpenAI o Claude.' },
+        description: { en: 'Assistants, OCR, voice and agents built into your product with Claude or OpenAI, designed by a Claude Certified Architect.', es: 'Asistentes, OCR, voz y agentes integrados en tu producto con Claude u OpenAI, diseñados por un Claude Certified Architect.' },
     },
     {
         id: 'mvp', icon: Rocket,
         title: { en: 'MVP for startups', es: 'MVP para startups' },
-        description: { en: 'From idea to a testable product in weeks, ready to show users and investors.', es: 'De la idea a un producto que puedes probar en semanas, listo para usuarios e inversionistas.' },
+        description: { en: 'From idea to a product real users can try in weeks, ready to show investors.', es: 'De la idea a un producto que usuarios reales pueden probar en semanas, listo para mostrar a inversionistas.' },
     },
     {
         id: 'maintenance', icon: Wrench,
         title: { en: 'Maintenance & store publishing', es: 'Mantenimiento y publicación' },
-        description: { en: 'Updates, store reviews, crash fixes and new features for apps already in production.', es: 'Actualizaciones, revisiones de tienda, corrección de errores y nuevas funciones para apps en producción.' },
+        description: { en: 'Updates, store submissions, crash fixes and new features for apps already in production.', es: 'Actualizaciones, envíos a revisión de las tiendas, corrección de errores y nuevas funciones para apps en producción.' },
     },
 ]
 
@@ -62,7 +62,7 @@ export const PROCESS_STEPS: { title: L; description: L; when: L }[] = [
     {
         title: { en: 'Launch & support', es: 'Lanzamiento y soporte' },
         description: { en: 'I publish to the stores, set up analytics and stay around after launch.', es: 'Publico en las tiendas, configuro analítica y te acompaño después del lanzamiento.' },
-        when: { en: 'And beyond', es: 'Y después' },
+        when: { en: 'After launch', es: 'Después del lanzamiento' },
     },
 ]
 

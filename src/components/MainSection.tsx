@@ -1,5 +1,5 @@
 import { ArrowRight, Check, FileText } from 'lucide-react'
-import { FaApple, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaAndroid, FaGithub, FaLinkedin } from 'react-icons/fa'
 import CuentitosHome from '../assets/cuentitos-home.webp'
 import Daniel from '../assets/daniel.webp'
 import AvailableForWork from './AvailableForWork'
@@ -8,7 +8,7 @@ import CertificationCard from './CertificationCard'
 import { useLang } from '../i18n'
 import { APP_CONSTANTS, whatsappUrl } from '../utils/constants'
 
-const NAMES = ['Panasonic · Yohana', 'Bancolombia', 'Leal', 'Gorilla Logic', 'Habit Heroes', 'CitaMente', 'Cuentitos', 'Capgemini']
+const NAMES = ['Panasonic · Yohana', 'Bancolombia', 'Leal', 'Gorilla Logic', 'Capgemini']
 const HIRE_LINKS = [
     { href: APP_CONSTANTS.cvUrl, label: 'CV', Icon: FileText },
     { href: APP_CONSTANTS.linkedInUrl, label: 'LinkedIn', Icon: FaLinkedin },
@@ -45,7 +45,7 @@ export default function MainSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
-                            <Button type='primary' onClick={() => window.open(whatsappUrl(t.waGreeting), '_blank', 'noopener')}>
+                            <Button type='primary' onClick={() => window.open(whatsappUrl(t.waHello), '_blank', 'noopener')}>
                                 {t.heroCtaPrimary} <ArrowRight className="h-4 w-4" />
                             </Button>
                             <Button type='secondary' onClick={() => handleScrollTo('apps')}>{t.heroCtaSecondary}</Button>
@@ -88,7 +88,7 @@ export default function MainSection() {
                         <div className="absolute -left-6 bottom-10 w-44 rounded-[1.75rem] border-[6px] border-chocolate bg-chocolate shadow-2xl overflow-hidden">
                             <img src={CuentitosHome} alt="Cuentitos app" className="aspect-[1320/2868] w-full object-cover object-top" loading="lazy" />
                             <span className="absolute bottom-2 left-2 right-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-white/95 px-2 py-1 text-[11px] font-semibold text-chocolate">
-                                <FaApple /> {t.heroCardBeta}
+                                <FaAndroid className="text-green-dark" /> {t.heroCardBeta}
                             </span>
                         </div>
                         <div className="absolute right-0 -top-4 xl:-right-8">

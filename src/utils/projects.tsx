@@ -22,7 +22,7 @@ const PROJECTS: Project[] = [
         thumbnail: HabitHeroes,
         technologies: ["Flutter", "Bloc", "Supabase", "Firebase", "PostgreSQL"],
         description: {
-            en: "Gamified family habit-tracking app where parents create tasks and assign them to children who earn points for completion, redeemable for real-world rewards",
+            en: "Gamified family habits: parents assign tasks, kids earn points for finishing them and trade those points for real-world rewards",
             es: "App gamificada de hábitos en familia: los padres crean tareas, los niños ganan puntos al completarlas y los canjean por recompensas reales",
         },
         beta: { android: '', ios: '' }, // TODO: Play closed-testing opt-in URL / TestFlight public link
@@ -32,10 +32,10 @@ const PROJECTS: Project[] = [
         thumbnail: Citamente,
         technologies: ["Flutter", "Bloc", "Supabase", "OpenAI", "PostgreSQL"],
         description: {
-            en: "AI-powered medical appointment management app for families with voice recording, photo OCR, and smart data extraction to organize doctor visits",
+            en: "AI app that keeps your family's doctor visits organized: record the appointment, snap a photo of the paperwork and the key details are extracted for you",
             es: "App con IA para gestionar las citas médicas de la familia, con grabación de voz, OCR de fotos y extracción inteligente de datos para organizar cada consulta",
         },
-        beta: { android: 'https://play.google.com/apps/testing/com.daniel.villamizar.appointment.appointment.staging', ios: '' }, // TODO
+        beta: { android: 'https://play.google.com/apps/testing/com.daniel.villamizar.appointment.appointment.staging', ios: 'https://testflight.apple.com/join/kjVNtHpQ' },
     },
     {
         name: "Cuentitos",
@@ -45,15 +45,15 @@ const PROJECTS: Project[] = [
             en: "AI-generated stories for kids: pick the topics and the moral you want to teach, and get a brand-new story ready to read together",
             es: "Cuentos para niños generados con IA: elige los temas y la moraleja que quieres enseñar y obtén una historia nueva lista para leer juntos",
         },
-        beta: { android: 'https://play.google.com/apps/testing/com.danielvillamizar.cuentitos', ios: '' }, // TODO
+        beta: { android: 'https://play.google.com/apps/testing/com.danielvillamizar.cuentitos', ios: 'https://testflight.apple.com/join/DU62SBkh' },
     },
     {
         name: "Yohana (Panasonic)",
         thumbnail: Yohana,
-        technologies: ["Flutter", "Dart", "Android", "iOS", "Open AI", "Claude", "ADK", "Google Cloud"],
+        technologies: ["Flutter", "Dart", "Android", "iOS", "OpenAI", "Claude", "ADK", "Google Cloud"],
         description: {
-            en: "Next-generation family concierge service app that supports busy families with a dedicated team of professionals, helping manage daily to-dos from meal planning to travel arrangements",
-            es: "App de concierge familiar de nueva generación que apoya a familias ocupadas con un equipo dedicado de profesionales, desde planear comidas hasta organizar viajes",
+            en: "Family concierge app that pairs busy families with a dedicated team of professionals to handle daily to-dos, from meal planning to travel",
+            es: "App de concierge familiar que apoya a familias ocupadas con un equipo dedicado de profesionales, desde planear comidas hasta organizar viajes",
         },
     },
     {
@@ -61,7 +61,7 @@ const PROJECTS: Project[] = [
         thumbnail: AhorroALaMano,
         technologies: ["Flutter", "Dart", "Firebase", "iOS", "Android"],
         description: {
-            en: "Bancolombia's mobile-first low-amount savings account app with no maintenance fees, enabling users to manage finances, pay bills, transfer money, and receive salary deposits entirely from their phone",
+            en: "Bancolombia's 100% mobile savings account with no maintenance fees: pay bills, transfer money and receive your salary straight from your phone",
             es: "Cuenta de ahorros 100% móvil de Bancolombia, sin cuota de manejo: los usuarios pagan facturas, transfieren dinero y reciben su salario desde el celular",
         },
     },

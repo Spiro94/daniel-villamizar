@@ -11,7 +11,7 @@ export default function ServicesSection() {
         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
     }
 
-    const stats = [['8+', t.statYears], ['6+', t.statApps], ['2', t.statStores], ['1:1', t.statDirect]]
+    const stats = [['8+', t.statYears], [t.statUsers, t.statApps], ['100%', t.statStores], ['1:1', t.statDirect]]
 
     return (
         <section id='services' className='scroll-mt-20 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white text-chocolate'>

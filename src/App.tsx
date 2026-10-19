@@ -30,7 +30,7 @@ function App() {
         <ContactSection />
       </Suspense>
       <a
-        href={whatsappUrl(t.waGreeting)}
+        href={whatsappUrl(t.waHello)}
         target='_blank'
         rel='noopener noreferrer'
         aria-label={t.waFab}
