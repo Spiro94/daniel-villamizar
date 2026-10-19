@@ -1,4 +1,5 @@
 import AhorroALaMano from '../assets/a-la-mano.webp'
+import Byrider from '../assets/byrider.webp'
 import Citamente from '../assets/citamente.webp'
 import Cuentitos from '../assets/cuentitos.webp'
 import HabitHeroes from '../assets/habit-heroes.webp'
@@ -54,6 +55,15 @@ const PROJECTS: Project[] = [
         description: {
             en: "Family concierge app that pairs busy families with a dedicated team of professionals to handle daily to-dos, from meal planning to travel",
             es: "App de concierge familiar que apoya a familias ocupadas con un equipo dedicado de profesionales, desde planear comidas hasta organizar viajes",
+        },
+    },
+    {
+        name: "MyByrider (Byrider)",
+        thumbnail: Byrider,
+        technologies: ["Flutter", "Dart", "Xamarin", "iOS", "Android"],
+        description: {
+            en: "Redesigned and ported from Xamarin to Flutter: Byrider's car-ownership app where 50K+ customers manage their loans, make payments and set up autopay",
+            es: "Rediseño y migración de Xamarin a Flutter de la app de Byrider, donde más de 50K clientes gestionan su crédito de vehículo, hacen pagos y programan pagos automáticos",
         },
     },
     {

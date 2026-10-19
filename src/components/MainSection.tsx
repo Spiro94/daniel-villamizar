@@ -8,7 +8,7 @@ import CertificationCard from './CertificationCard'
 import { useLang } from '../i18n'
 import { APP_CONSTANTS, whatsappUrl } from '../utils/constants'
 
-const NAMES = ['Panasonic · Yohana', 'Bancolombia', 'Leal', 'Gorilla Logic', 'Capgemini']
+const NAMES = ['Panasonic · Yohana', 'Bancolombia', 'Byrider', 'Leal', 'Gorilla Logic', 'Capgemini']
 const HIRE_LINKS = [
     { href: APP_CONSTANTS.cvUrl, label: 'CV', Icon: FileText },
     { href: APP_CONSTANTS.linkedInUrl, label: 'LinkedIn', Icon: FaLinkedin },
