@@ -48,7 +48,7 @@
   /* CTA color */
   --color-tangerine: #ff8c42;
   --color-golden: #f39c12;
-  --color-tangerine-dark: #c66a1a;
+  --color-tangerine-dark: #a65512;
 
   /* Dark mode */
   --color-navy-black: #0f0e13;
@@ -88,4 +88,20 @@
 
 .animate-pulse-ring {
   animation: pulse-ring 2s infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-50% - 1.5rem));
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
 }

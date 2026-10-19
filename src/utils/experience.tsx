@@ -1,92 +1,27 @@
-interface Experience {
-    role: string,
-    company: string,
-    startDate: Date,
-    endDate: Date | null,
-    description: string[],
-    technologies: string[]
-}
+import { Code2, Layers, Server, Users, type LucideIcon } from "lucide-react";
+import type { L } from "../i18n";
 
-export const WORK_EXPERIENCES: Experience[] = [
+export const EXPERIENCE_HIGHLIGHTS: { icon: LucideIcon; title: L; description: L }[] = [
     {
-        role: "Senior Fullstack Developer",
-        company: "Gorilla Logic",
-        startDate: new Date(2022, 0, 1),
-        endDate: null,
-        description: [
-            "Architected and developed high-performance Flutter widgets for iOS and Android platforms, ensuring responsive design and seamless user experiences",
-            "Built a local-first core library in Rust, using Axum and Actix Web to expose a shared business-logic layer consumed consistently across platforms",
-            "Packaged the Rust core into cross-platform desktop apps with Tauri, keeping a single native-performance codebase in sync with the mobile clients",
-            "Led cross-functional collaboration with product, design, and backend teams to align technical implementations with business objectives",
-            "Implemented comprehensive testing and debugging strategies, reducing defects by maintaining quality standards pre-release",
-            "Integrated complex backend services and APIs, establishing robust communication layers between mobile clients and server infrastructure",
-            "Mentored and trained junior developers on Flutter best practices, code standards, and architectural patterns to elevate team technical excellence"
-        ],
-        technologies: ["Flutter", "Dart", "iOS", "Android", "Rust", "Axum", "Actix Web", "Tauri", "Open AI", "Claude", "ADK", "Google Cloud"]
+        icon: Code2,
+        title: { en: 'Mobile apps at scale', es: 'Apps móviles a gran escala' },
+        description: { en: 'Flutter apps for iOS and Android in banking, loyalty and family services, from first commit to the stores.', es: 'Apps en Flutter para iOS y Android en banca, fidelización y servicios familiares, desde el primer commit hasta las tiendas.' },
     },
     {
-        role: "Experienced Consultant",
-        company: "Amaris Consulting",
-        startDate: new Date(2021, 0, 1),
-        endDate: new Date(2022, 0, 1),
-        description: [
-            "Spearheaded end-to-end development of the Leal App for iOS and Android using Flutter, delivering a polished, production-ready mobile application",
-            "Partnered with product and design teams to translate requirements into elegant technical solutions that enhanced user satisfaction",
-            "Established seamless integration patterns between mobile application and backend services, enabling reliable data synchronization and API communication",
-            "Delivered high-quality code with rigorous testing practices to ensure app stability and performance across multiple devices and OS versions"
-        ],
-        technologies: ["Flutter", "Dart", "iOS", "Android"]
+        icon: Layers,
+        title: { en: 'Design systems', es: 'Design systems' },
+        description: { en: "Led Bancolombia's enterprise design system: reusable components and guidelines used across teams.", es: 'Lideré el design system empresarial de Bancolombia: componentes reutilizables y guías usadas por varios equipos.' },
     },
     {
-        role: "Senior Software Engineer",
-        company: "Capgemini",
-        startDate: new Date(2020, 0, 1),
-        endDate: new Date(2021, 0, 1),
-        description: [
-            "Led the development of Bancolombia's enterprise-grade Design System, establishing a unified design language and reusable component library for consistency across products",
-            "Created comprehensive design documentation and guidelines, enabling other teams to build cohesive interfaces aligned with brand standards",
-            "Implemented sophisticated UI components and smooth animations in the Bancolombia Ahorro a La Mano app, delivering an intuitive and delightful user experience",
-            "Evaluated and integrated emerging technologies and frameworks to enhance application performance, scalability, and user engagement metrics"
-        ],
-        technologies: ["Flutter", "Design System", "iOS", "Android"]
+        icon: Server,
+        title: { en: 'Backend & cross-platform core', es: 'Backend y core multiplataforma' },
+        description: { en: '.NET and SQL systems, AWS integrations, and a local-first Rust core (Axum, Actix Web, Tauri) shared across mobile and desktop.', es: 'Sistemas en .NET y SQL, integraciones con AWS y un core local-first en Rust (Axum, Actix Web, Tauri) compartido entre móvil y escritorio.' },
     },
     {
-        role: "Software Engineer",
-        company: "RENTEC Rentabilidad y Tecnología SAS",
-        startDate: new Date(2020, 0, 1),
-        endDate: new Date(2020, 11, 1),
-        description: [
-            "Engineered scalable MVC web applications using the .NET framework, implementing clean separation of concerns across views, controllers, and models",
-            "Designed and optimized SQL Server databases with complex queries and stored procedures, improving data retrieval efficiency and application responsiveness",
-            "Executed comprehensive testing and debugging protocols, identifying and resolving defects to ensure production-ready code quality",
-            "Conducted thorough code reviews, providing constructive feedback to peers while establishing best practices for code maintainability and team standards"
-        ],
-        technologies: [".NET", "MVC", "SQL Server", "C#"]
+        icon: Users,
+        title: { en: 'Leadership', es: 'Liderazgo' },
+        description: { en: 'Work side by side with product, design and backend teams, and mentor developers on architecture and best practices.', es: 'Trabajo de la mano con producto, diseño y backend, y soy mentor de otros desarrolladores en arquitectura y buenas prácticas.' },
     },
-    {
-        role: "FrontEnd Developer",
-        company: "IncubApp",
-        startDate: new Date(2019, 0, 1),
-        endDate: new Date(2021, 0, 1),
-        description: [
-            "Translated UX/UI designs into pixel-perfect Flutter interfaces, creating smooth navigation flows and intuitive user interactions across the app",
-            "Engineered seamless AWS service integrations including authentication with Cognito and serverless functions with Lambda for dynamic backend communication",
-            "Implemented responsive designs that adapt gracefully across various screen sizes and device orientations for optimal mobile experiences",
-            "Optimized app performance through efficient state management and component architecture best practices"
-        ],
-        technologies: ["Flutter", "Dart", "AWS", "Cognito", "Lambda"]
-    },
-    {
-        role: "Component Innovation Engineer",
-        company: "Sistemas y Computadores S.A.",
-        startDate: new Date(2018, 0, 1),
-        endDate: new Date(2020, 0, 1),
-        description: [
-            "Designed and developed full-stack web and desktop applications using the .NET framework, delivering solutions that met client specifications and business objectives",
-            "Created sophisticated Oracle database solutions with complex queries and stored procedures, optimizing data processing and application performance",
-            "Implemented component-based architectures using C# and VB.NET, promoting code reusability and maintainability across multiple projects",
-            "Collaborated directly with clients to capture business requirements, analyze workflows, and translate them into robust technical solutions and specifications"
-        ],
-        technologies: [".NET", "Oracle", "C#", "SQL", "VB.NET"]
-    }
 ]
+
+export const CORE_STACK = ['Flutter', 'Dart', 'React', 'TypeScript', 'Rust', '.NET', 'Supabase', 'Firebase', 'AWS', 'OpenAI', 'Claude']
