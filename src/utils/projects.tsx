@@ -26,7 +26,7 @@ const PROJECTS: Project[] = [
             en: "Gamified family habits: parents assign tasks, kids earn points for finishing them and trade those points for real-world rewards",
             es: "App gamificada de hábitos en familia: los padres crean tareas, los niños ganan puntos al completarlas y los canjean por recompensas reales",
         },
-        beta: { android: '', ios: '' }, // TODO: Play closed-testing opt-in URL / TestFlight public link
+        beta: { android: 'https://play.google.com/apps/testing/com.daniel.villamizar.habit_heroes', ios: '' }, // TODO: TestFlight public link
     },
     {
         name: "CitaMente",
