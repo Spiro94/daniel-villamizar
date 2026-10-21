@@ -4,17 +4,77 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Senior Flutter &amp; React developer and Claude Certified Architect. I design, build and publish iOS, Android and web apps for startups and businesses: 8+ years, apps used by thousands at Bancolombia and Panasonic. Free quote in 48 hours, or see my CV for full-time roles."
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     />
+    <!-- seo:start (replaced per language by scripts/prerender.mjs) -->
     <title>Daniel Villamizar · iOS, Android &amp; Web App Developer | Claude Certified Architect</title>
+    <meta name="description" content="Senior Flutter &amp; React developer and Claude Certified Architect. I design, build and publish iOS, Android and web apps for startups and businesses: 8+ years, apps used by thousands at Bancolombia and Panasonic. Free quote in 48 hours, or see my CV for full-time roles." />
+    <link rel="canonical" href="https://daniel-villamizar.vercel.app/" />
+    <!-- seo:end -->
+    <link rel="alternate" hreflang="en" href="https://daniel-villamizar.vercel.app/" />
+    <link rel="alternate" hreflang="es" href="https://daniel-villamizar.vercel.app/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://daniel-villamizar.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Daniel Villamizar" />
+    <meta property="og:image" content="https://daniel-villamizar.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Daniel Villamizar, iOS, Android and web app developer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://daniel-villamizar.vercel.app/og-image.png" />
+    <meta name="theme-color" content="#8B7FC8" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://daniel-villamizar.vercel.app/#person",
+            "name": "Daniel Villamizar",
+            "jobTitle": "iOS, Android & Web App Developer",
+            "url": "https://daniel-villamizar.vercel.app/",
+            "image": "https://daniel-villamizar.vercel.app/og-image.png",
+            "nationality": "Colombia",
+            "knowsAbout": ["Flutter", "React", "TypeScript", "iOS development", "Android development", "Claude", "AI integration"],
+            "hasCredential": {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Claude Certified Architect – Foundations",
+              "recognizedBy": { "@type": "Organization", "name": "Anthropic" },
+              "url": "https://www.credly.com/badges/07c08f2a-ce0d-4392-bf0b-da6e9246d14d"
+            },
+            "sameAs": [
+              "https://github.com/Spiro94",
+              "https://www.linkedin.com/in/danielvillamizar94/",
+              "https://www.credly.com/badges/07c08f2a-ce0d-4392-bf0b-da6e9246d14d"
+            ]
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://daniel-villamizar.vercel.app/#service",
+            "name": "Daniel Villamizar · App Development",
+            "url": "https://daniel-villamizar.vercel.app/",
+            "image": "https://daniel-villamizar.vercel.app/og-image.png",
+            "description": "Design, development and publishing of iOS, Android and web apps for startups and businesses.",
+            "founder": { "@id": "https://daniel-villamizar.vercel.app/#person" },
+            "areaServed": ["Colombia", "Latin America", "United States"],
+            "availableLanguage": ["English", "Spanish"]
+          }
+        ]
+      }
+    </script>
+    <script>
+      // Send Spanish-speaking visitors (or anyone who picked ES before) from / to /es/.
+      try {
+        var saved = localStorage.getItem('lang');
+        if (location.pathname === '/' && (saved === 'es' || (!saved && navigator.language.indexOf('es') === 0)))
+          location.replace('/es/' + location.hash);
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

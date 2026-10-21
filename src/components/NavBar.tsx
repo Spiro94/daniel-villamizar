@@ -2,20 +2,23 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Button from "./Button";
 import { useLang } from "../i18n";
+import { LANG_PATH } from "../seo";
 
 function LangToggle() {
     const { lang, setLang } = useLang();
     return (
         <div className="inline-flex rounded-full bg-lavender-soft p-1 text-xs font-semibold" role="group" aria-label="Language">
             {(['en', 'es'] as const).map((l) => (
-                <button
+                <a
                     key={l}
-                    onClick={() => setLang(l)}
-                    aria-pressed={lang === l}
+                    href={LANG_PATH[l]}
+                    hrefLang={l}
+                    onClick={(e) => { e.preventDefault(); setLang(l); }}
+                    aria-current={lang === l ? 'page' : undefined}
                     className={`px-2.5 py-1 rounded-full uppercase cursor-pointer transition-colors ${lang === l ? 'bg-white text-chocolate shadow' : 'text-lavender-dark'}`}
                 >
                     {l}
-                </button>
+                </a>
             ))}
         </div>
     );
