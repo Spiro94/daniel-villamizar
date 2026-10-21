@@ -13,7 +13,7 @@ const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8')
 const escape = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 
 for (const lang of Object.keys(SEO)) {
-    const { title, description, locale } = SEO[lang]
+    const { title, description, locale, image, imageAlt } = SEO[lang]
     const url = SITE_URL + LANG_PATH[lang]
     const head = [
         `<title>${escape(title)}</title>`,
@@ -23,6 +23,9 @@ for (const lang of Object.keys(SEO)) {
         `<meta property="og:title" content="${escape(title)}" />`,
         `<meta property="og:description" content="${escape(description)}" />`,
         `<meta property="og:locale" content="${locale}" />`,
+        `<meta property="og:image" content="${SITE_URL + image}" />`,
+        `<meta property="og:image:alt" content="${escape(imageAlt)}" />`,
+        `<meta name="twitter:image" content="${SITE_URL + image}" />`,
         `<meta name="twitter:title" content="${escape(title)}" />`,
         `<meta name="twitter:description" content="${escape(description)}" />`,
     ].join('\n    ')

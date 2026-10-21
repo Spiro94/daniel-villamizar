@@ -31,7 +31,7 @@ npm run dev       # start the dev server at http://localhost:5173
 ## Project structure
 
 ```
-public/                 Static files served as-is (favicon, CV PDF, robots.txt, sitemap.xml, og-image.png)
+public/                 Static files served as-is (favicon, CV PDF, robots.txt, sitemap.xml, og-image*.png)
 scripts/prerender.mjs   Writes dist/index.html and dist/es/index.html after the build
 src/
   App.tsx               Page layout; sections below the hero are lazy-loaded
