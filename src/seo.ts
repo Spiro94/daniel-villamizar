@@ -1,6 +1,6 @@
 import type { L, Lang } from './i18n'
 
-export const SITE_URL = 'https://daniel-villamizar.vercel.app'
+export const SITE_URL = 'https://www.danielvillamizar.dev'
 
 export const LANG_PATH: L = { en: '/', es: '/es/' }
 

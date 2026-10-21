@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daniel-villamizar.vercel.app/sitemap.xml
+Sitemap: https://www.danielvillamizar.dev/sitemap.xml
