@@ -24,8 +24,8 @@ export default function MainSection() {
 
     return (
         <section id='home'>
-            <main className="relative isolate min-h-screen bg-linear-to-br from-background-light via-white to-lavender-soft text-chocolate">
-                <div className="mx-auto flex max-w-6xl gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 pt-24 sm:pt-32 flex-col lg:flex-row items-center">
+            <main className="relative isolate flex min-h-screen flex-col bg-linear-to-br from-background-light via-white to-lavender-soft text-chocolate">
+                <div className="mx-auto flex w-full max-w-6xl flex-1 justify-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 pt-24 sm:pt-32 flex-col lg:flex-row items-center">
                     <div className="flex-1 space-y-8 sm:space-y-10 text-center lg:text-left">
                         <div className="flex items-center justify-center lg:justify-start gap-3">
                             <img src={Daniel} alt="Daniel Villamizar" width={48} height={48} className="lg:hidden w-12 h-12 rounded-full object-cover object-top ring-2 ring-white shadow-md" />

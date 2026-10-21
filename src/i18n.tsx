@@ -1,5 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
+import { LANG_PATH, SEO, SITE_URL, langFromPath } from './seo'
 
 export type Lang = 'en' | 'es'
 export type L<T = string> = Record<Lang, T>
@@ -144,22 +145,23 @@ const es: typeof en = {
 
 const STRINGS = { en, es }
 
-function initialLang(): Lang {
-    try {
-        const saved = localStorage.getItem('lang')
-        if (saved === 'en' || saved === 'es') return saved
-    } catch { /* storage blocked */ }
-    return navigator.language.startsWith('es') ? 'es' : 'en'
-}
-
 const LangContext = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: typeof en } | null>(null)
 
-export function LangProvider({ children }: { children: ReactNode }) {
+export function LangProvider({ initialLang, children }: { initialLang: Lang; children: ReactNode }) {
     const [lang, setLang] = useState<Lang>(initialLang)
     useEffect(() => {
         document.documentElement.lang = lang
+        document.title = SEO[lang].title
+        document.querySelector('meta[name="description"]')?.setAttribute('content', SEO[lang].description)
+        document.querySelector('link[rel="canonical"]')?.setAttribute('href', SITE_URL + LANG_PATH[lang])
+        if (location.pathname !== LANG_PATH[lang]) history.pushState(null, '', LANG_PATH[lang] + location.hash)
         try { localStorage.setItem('lang', lang) } catch { /* storage blocked */ }
     }, [lang])
+    useEffect(() => {
+        const onPop = () => setLang(langFromPath(location.pathname))
+        window.addEventListener('popstate', onPop)
+        return () => window.removeEventListener('popstate', onPop)
+    }, [])
     return <LangContext.Provider value={{ lang, setLang, t: STRINGS[lang] }}>{children}</LangContext.Provider>
 }
 

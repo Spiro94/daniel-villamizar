@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# Daniel Villamizar · Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio and freelance landing page for Daniel Villamizar, an iOS, Android and web app developer and Claude Certified Architect. It covers the apps I've built and published, client projects, services, my work process and experience. There's also a WhatsApp link for quotes and a downloadable CV.
 
-Currently, two official plugins are available:
+The site is bilingual: English at `/` and Spanish at `/es/`. Both pages are pre-rendered to static HTML at build time, so search engines and link previews see the full content.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech stack
 
-## React Compiler
+- [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- [Vite](https://vite.dev) (Rolldown build)
+- [Tailwind CSS v4](https://tailwindcss.com) via `@tailwindcss/vite`
+- Icons from [lucide-react](https://lucide.dev) and [react-icons](https://react-icons.github.io/react-icons/)
+- [Vercel Analytics](https://vercel.com/docs/analytics) and [Speed Insights](https://vercel.com/docs/speed-insights)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting started
 
-## Expanding the ESLint configuration
+Requires Node.js 20+.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev       # start the dev server at http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Script            | What it does                                  |
+| ----------------- | --------------------------------------------- |
+| `npm run dev`     | Start the Vite dev server with HMR            |
+| `npm run build`   | Type-check, build and pre-render `/` and `/es/` into `dist/` |
+| `npm run preview` | Serve the production build locally            |
+| `npm run lint`    | Run ESLint                                    |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+public/                 Static files served as-is (favicon, CV PDF, robots.txt, sitemap.xml, og-image*.png)
+scripts/prerender.mjs   Writes dist/index.html and dist/es/index.html after the build
+src/
+  App.tsx               Page layout; sections below the hero are lazy-loaded
+  main.tsx              Client entry; hydrates the pre-rendered HTML
+  entry-server.tsx      Server entry used by the pre-render step
+  seo.ts                Site URL and per-language title/description
+  i18n.tsx              EN/ES strings and the language context (useLang)
+  index.css             Tailwind setup, theme tokens and custom animations
+  components/           One component per section (NavBar, MainSection, AppsSection, ...)
+  utils/
+    constants.tsx       Contact links, WhatsApp number, CV and credential URLs
+    projects.tsx        Client projects
+    experience.tsx      Work history
+    services.tsx        Services offered
+    technologies.tsx    Tech/tools list
+  assets/               Images (WebP) and SVGs
+```
+
+## Editing content
+
+- **Text and translations:** `src/i18n.tsx`. Every key has an `en` and an `es` value.
+- **Projects, experience, services, tech:** the matching file in `src/utils/`.
+- **Contact links and CV:** `src/utils/constants.tsx`. To update the CV, replace `public/daniel-villamizar-cv.pdf`.
+- **Page title, description, domain:** `src/seo.ts`. If the domain changes, also update `index.html` (hreflang, Open Graph, JSON-LD), `public/robots.txt` and `public/sitemap.xml`.
+- **Colors and design tokens:** `src/index.css`. See `design.md` and `TAILWIND_COLORS_GUIDE.md` for the design system.
+
+## Deployment
+
+The site is hosted on [Vercel](https://vercel.com) as a static Vite build. The build command is `npm run build` and the output directory is `dist`. `vercel.json` enables trailing slashes so `/es` redirects to `/es/`.
