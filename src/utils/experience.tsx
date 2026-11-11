@@ -1,6 +1,6 @@
 import type { L } from "../i18n";
 
-// Keep in sync with cv/resume.html (same roles, years and achievements).
+// Keep in sync with cv/main.tex (same roles, years and achievements).
 export interface Job {
     company: string;
     role: string;
