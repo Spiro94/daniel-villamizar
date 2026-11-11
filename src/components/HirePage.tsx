@@ -9,7 +9,7 @@ import ProjectCard from './ProjectCard'
 import SectionHeader from './SectionHeader'
 
 // English-only page for recruiters and hiring managers. Keep the headline and summary in sync with cv/main.tex.
-const HEADLINE = 'Senior Fullstack Engineer | Flutter, React, TypeScript, Rust | Mobile, Web & Backend | Claude Certified Architect'
+const HEADLINE = 'Senior Fullstack Engineer | Flutter, React, TypeScript, Rust | AI Integrations (Claude, OpenAI) | Claude Certified Architect'
 
 const FACTS = [
     ['8+ years', 'building production apps'],
