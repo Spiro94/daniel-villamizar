@@ -12,7 +12,7 @@ export interface Job {
 export const EXPERIENCE: Job[] = [
     {
         company: 'Gorilla Logic',
-        role: 'Senior Software Engineer (Mobile & Rust)',
+        role: 'Senior Fullstack Engineer',
         years: '2022 – Present',
         client: 'Byrider · Panasonic',
         achievements: [

@@ -9,7 +9,7 @@ import ProjectCard from './ProjectCard'
 import SectionHeader from './SectionHeader'
 
 // English-only page for recruiters and hiring managers. Keep the headline and summary in sync with cv/main.tex.
-const HEADLINE = 'Senior Mobile Engineer | Flutter, Dart, Rust, React | Design Systems & Local-first Apps | Claude Certified Architect'
+const HEADLINE = 'Senior Fullstack Engineer | Flutter, React, TypeScript, Rust | Mobile, Web & Backend | Claude Certified Architect'
 
 const FACTS = [
     ['8+ years', 'building production apps'],
@@ -55,15 +55,15 @@ export default function HirePage() {
             <main className="bg-linear-to-br from-background-light via-white to-lavender-soft">
                 <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16 px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-14 sm:pb-20">
                     <div className="flex-1 space-y-7 text-center lg:text-left">
-                        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">Senior Mobile Engineer · Remote</p>
+                        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">Senior Fullstack Engineer · Remote</p>
                         <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.05]">Daniel Villamizar</h1>
                         <p className="font-semibold text-chocolate/85 leading-relaxed">{HEADLINE}</p>
                         <p className="max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg text-chocolate/75 leading-relaxed">
-                            8+ years building cross-platform products with Flutter and Dart for banking, auto finance, loyalty and consumer brands,
-                            including Bancolombia, Byrider and Panasonic (Yohana). I redesigned and migrated Byrider's customer app from Xamarin to
-                            Flutter for 50K+ customers, built components for Bancolombia's enterprise design system, and developed a local-first
-                            Rust core (Axum, Actix Web, Tauri) shared across mobile and desktop. As a Claude Certified Architect, I ship production
-                            AI features with Claude and OpenAI.
+                            8+ years building products across mobile, web and backend: Flutter apps for Bancolombia, Byrider and Panasonic
+                            (Yohana), React and TypeScript on the web, and a local-first Rust core (Axum, Actix Web, Tauri) shared across mobile
+                            and desktop. I redesigned and migrated Byrider's customer app from Xamarin to Flutter for 50K+ customers and built
+                            components for Bancolombia's enterprise design system. As a Claude Certified Architect, I ship production AI features
+                            with Claude and OpenAI.
                         </p>
                         <ContactLinks />
                     </div>

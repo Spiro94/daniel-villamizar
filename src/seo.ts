@@ -25,11 +25,11 @@ export const SEO: L<{ title: string; description: string; locale: string; image:
 export const HIRE_PATH = '/hire/'
 
 export const HIRE_SEO = {
-    title: 'Daniel Villamizar · Senior Mobile Engineer (Flutter, Rust, React) | Remote',
-    description: 'Senior Mobile Engineer with 8+ years building Flutter apps for Bancolombia, Byrider (50K+ customers) and Panasonic, plus a local-first Rust core. Claude Certified Architect. Open to remote senior roles from Colombia (UTC-5).',
+    title: 'Daniel Villamizar · Senior Fullstack Engineer (Flutter, React, Rust) | Remote',
+    description: 'Senior Fullstack Engineer with 8+ years across mobile, web and backend: Flutter apps for Bancolombia, Byrider (50K+ customers) and Panasonic, React and TypeScript, and a local-first Rust core. Claude Certified Architect. Open to remote senior roles from Colombia (UTC-5).',
     locale: 'en_US',
     image: '/og-image.png',
-    imageAlt: 'Daniel Villamizar, Senior Mobile Engineer',
+    imageAlt: 'Daniel Villamizar, Senior Fullstack Engineer',
 }
 
 export const isHirePath = (pathname: string) => pathname.replace(/\/?$/, '/') === HIRE_PATH
