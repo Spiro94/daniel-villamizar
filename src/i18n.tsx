@@ -23,6 +23,7 @@ const en = {
     chipDirect: 'You talk to the developer',
     chipOwn: 'The code is yours',
     fullTime: 'Hiring for a senior role? See my',
+    hireProfile: 'Hiring profile',
     trustedBy: "Teams I've shipped products with",
     heroCardBeta: '3 apps in beta',
     certIssued: 'Anthropic · Issued Oct 2026',
@@ -95,6 +96,7 @@ const es: typeof en = {
     chipDirect: 'Hablas con quien programa',
     chipOwn: 'El código es tuyo',
     fullTime: '¿Contratas para un rol senior? Mira mi',
+    hireProfile: 'Perfil para reclutadores',
     trustedBy: 'Equipos con los que he lanzado productos',
     heroCardBeta: '3 apps en beta',
     certIssued: 'Anthropic · Emitida en oct 2026',
@@ -153,16 +155,18 @@ const STRINGS = { en, es }
 
 const LangContext = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: typeof en } | null>(null)
 
-export function LangProvider({ initialLang, children }: { initialLang: Lang; children: ReactNode }) {
+// syncUrl=false keeps the URL, title and meta tags as rendered (used by the English-only /hire page).
+export function LangProvider({ initialLang, syncUrl = true, children }: { initialLang: Lang; syncUrl?: boolean; children: ReactNode }) {
     const [lang, setLang] = useState<Lang>(initialLang)
     useEffect(() => {
+        if (!syncUrl) return
         document.documentElement.lang = lang
         document.title = SEO[lang].title
         document.querySelector('meta[name="description"]')?.setAttribute('content', SEO[lang].description)
         document.querySelector('link[rel="canonical"]')?.setAttribute('href', SITE_URL + LANG_PATH[lang])
         if (location.pathname !== LANG_PATH[lang]) history.pushState(null, '', LANG_PATH[lang] + location.hash)
         try { localStorage.setItem('lang', lang) } catch { /* storage blocked */ }
-    }, [lang])
+    }, [lang, syncUrl])
     useEffect(() => {
         const onPop = () => setLang(langFromPath(location.pathname))
         window.addEventListener('popstate', onPop)
