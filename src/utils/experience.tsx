@@ -1,27 +1,74 @@
-import { Code2, Layers, Server, Users, type LucideIcon } from "lucide-react";
 import type { L } from "../i18n";
 
-export const EXPERIENCE_HIGHLIGHTS: { icon: LucideIcon; title: L; description: L }[] = [
+// Keep in sync with cv/resume.html (same roles, years and achievements).
+export interface Job {
+    company: string;
+    role: string;
+    years: string;
+    client?: string;
+    achievements: L[];
+}
+
+export const EXPERIENCE: Job[] = [
     {
-        icon: Code2,
-        title: { en: 'Mobile apps at scale', es: 'Apps móviles a gran escala' },
-        description: { en: 'Flutter apps for iOS and Android in banking, loyalty and family services, from first commit to the stores.', es: 'Apps en Flutter para iOS y Android en banca, fidelización y servicios familiares, desde el primer commit hasta las tiendas.' },
+        company: 'Gorilla Logic',
+        role: 'Senior Software Engineer (Mobile & Rust)',
+        years: '2022 – Present',
+        client: 'Byrider · Panasonic',
+        achievements: [
+            { en: "Redesigned and migrated Byrider's customer app from Xamarin to Flutter, used by 50K+ customers to manage auto loans, payments and autopay.", es: 'Rediseñé y migré de Xamarin a Flutter la app de clientes de Byrider, usada por más de 50K clientes para gestionar créditos, pagos y pagos automáticos.' },
+            { en: 'Built Flutter features for Yohana (Panasonic) with AI services (OpenAI, Claude, Google ADK) on Google Cloud.', es: 'Desarrollé funcionalidades en Flutter para Yohana (Panasonic) con servicios de IA (OpenAI, Claude, Google ADK) en Google Cloud.' },
+            { en: 'Developed a local-first Rust core (Axum, Actix Web) packaged as cross-platform desktop apps with Tauri.', es: 'Desarrollé un core local-first en Rust (Axum, Actix Web) empaquetado como apps de escritorio multiplataforma con Tauri.' },
+        ],
     },
     {
-        icon: Layers,
-        title: { en: 'Design systems', es: 'Design systems' },
-        description: { en: "Led Bancolombia's enterprise design system: reusable components and guidelines used across teams.", es: 'Lideré el design system empresarial de Bancolombia: componentes reutilizables y guías usadas por varios equipos.' },
+        company: 'Amaris Consulting',
+        role: 'Senior Flutter Engineer (Consultant)',
+        years: '2021 – 2022',
+        client: 'Leal',
+        achievements: [
+            { en: 'Designed, built and maintained the Leal loyalty app for iOS and Android with Flutter and Firebase.', es: 'Diseñé, desarrollé y mantuve la app de fidelización Leal para iOS y Android con Flutter y Firebase.' },
+        ],
     },
     {
-        icon: Server,
-        title: { en: 'Backend & cross-platform core', es: 'Backend y core multiplataforma' },
-        description: { en: '.NET and SQL systems, AWS integrations, and a local-first Rust core (Axum, Actix Web, Tauri) shared across mobile and desktop.', es: 'Sistemas en .NET y SQL, integraciones con AWS y un core local-first en Rust (Axum, Actix Web, Tauri) compartido entre móvil y escritorio.' },
+        company: 'Capgemini',
+        role: 'Senior Software Engineer',
+        years: '2020 – 2021',
+        client: 'Bancolombia',
+        achievements: [
+            { en: "Built reusable components, design language and guidelines for Bancolombia's enterprise design system, used across multiple teams.", es: 'Construí componentes reutilizables, lenguaje de diseño y guías para el design system empresarial de Bancolombia, usado por varios equipos.' },
+            { en: 'Implemented complex interfaces and animations for Ahorro a la Mano, a 100% mobile savings account.', es: 'Implementé interfaces y animaciones complejas para Ahorro a la Mano, una cuenta de ahorros 100% móvil.' },
+        ],
     },
     {
-        icon: Users,
-        title: { en: 'Leadership', es: 'Liderazgo' },
-        description: { en: 'I work side by side with product, design and backend teams, and mentor developers on architecture and best practices.', es: 'Trabajo de la mano con producto, diseño y backend, y soy mentor de otros desarrolladores en arquitectura y buenas prácticas.' },
+        company: 'RENTEC',
+        role: 'Software Engineer',
+        years: '2020',
+        achievements: [
+            { en: '.NET MVC web features and SQL Server database logic.', es: 'Funcionalidades web en .NET MVC y lógica de base de datos en SQL Server.' },
+        ],
+    },
+    {
+        company: 'IncubApp',
+        role: 'Mobile Developer (Flutter)',
+        years: '2019 – 2021',
+        achievements: [
+            { en: 'Flutter screens and navigation, with AWS Cognito authentication and Lambda functions.', es: 'Pantallas y navegación en Flutter, con autenticación en AWS Cognito y funciones Lambda.' },
+        ],
+    },
+    {
+        company: 'Sistemas y Computadores S.A.',
+        role: 'Software Engineer (.NET)',
+        years: '2018 – 2020',
+        achievements: [
+            { en: 'Web and desktop applications with .NET and Oracle PL/SQL.', es: 'Aplicaciones web y de escritorio con .NET y Oracle PL/SQL.' },
+        ],
     },
 ]
 
-export const CORE_STACK = ['Flutter', 'Dart', 'React', 'TypeScript', 'Rust', '.NET', 'Supabase', 'Firebase', 'AWS', 'OpenAI', 'Claude']
+export const CORE_STACK: { category: L; items: string[] }[] = [
+    { category: { en: 'Mobile', es: 'Móvil' }, items: ['Flutter', 'Dart', 'Bloc', 'iOS', 'Android'] },
+    { category: { en: 'Web & Backend', es: 'Web y backend' }, items: ['React', 'TypeScript', 'Node.js', 'Rust', '.NET'] },
+    { category: { en: 'Cloud & Data', es: 'Nube y datos' }, items: ['AWS', 'Google Cloud', 'Firebase', 'Supabase', 'PostgreSQL'] },
+    { category: { en: 'AI', es: 'IA' }, items: ['Claude', 'OpenAI', 'Google ADK'] },
+]

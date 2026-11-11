@@ -1,4 +1,4 @@
-import { ArrowRight, Check, FileText } from 'lucide-react'
+import { ArrowRight, Check, FileText, Mail } from 'lucide-react'
 import { FaAndroid, FaGithub, FaLinkedin } from 'react-icons/fa'
 import CuentitosHome from '../assets/cuentitos-home.webp'
 import Daniel from '../assets/daniel.webp'
@@ -13,6 +13,7 @@ const HIRE_LINKS = [
     { href: APP_CONSTANTS.cvUrl, label: 'CV', Icon: FileText },
     { href: APP_CONSTANTS.linkedInUrl, label: 'LinkedIn', Icon: FaLinkedin },
     { href: APP_CONSTANTS.githubUrl, label: 'GitHub', Icon: FaGithub },
+    { href: `mailto:${APP_CONSTANTS.email}`, label: 'Email', Icon: Mail },
 ]
 
 export default function MainSection() {
