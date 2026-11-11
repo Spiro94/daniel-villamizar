@@ -5,7 +5,7 @@ Objetivo: que el sitio sirva igual de bien a **clientes** (lo que ya hace) y a *
 
 ## Hecho
 
-- **CV** actualizado en `cv/main.tex` (mismo template de Overleaf, fechas solo con año). Pendiente: compilarlo en Overleaf y reemplazar `public/daniel-villamizar-cv.pdf`.
+- **CV** actualizado en `cv/main.tex` (mismo template de Overleaf, fechas solo con año). Compilado y publicado en `public/daniel-villamizar-cv.pdf`.
 - **Fase 1:** cifra de usuarios 50K+, correo en los links para reclutadores del hero, borrado de código sin uso (`AboutMeSection`, `TechToolsSection`, `technologies.tsx`, copia vieja del CV).
 - **Fase 2:** línea de tiempo de experiencia con los mismos datos del CV (`src/utils/experience.tsx`), "Mi rol" en cada proyecto de cliente (`src/utils/projects.tsx`), stack agrupado por categorías.
 - X queda fuera del sitio (no se usa activamente).
