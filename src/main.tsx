@@ -2,19 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import App from "./App.tsx";
+import HirePage from "./components/HirePage.tsx";
 import "./index.css";
 import { LangProvider } from "./i18n";
 import type { Lang } from "./i18n";
-import { langFromPath } from "./seo";
+import { isHirePath, langFromPath } from "./seo";
 
 const root = document.getElementById("root")!;
 const prerendered = root.hasChildNodes();
 // Hydration must start from the language the HTML was rendered in; LangProvider then syncs the URL.
 const initialLang = prerendered ? (document.documentElement.lang as Lang) : langFromPath(location.pathname);
+const hire = isHirePath(location.pathname);
 const app = (
   <React.StrictMode>
-    <LangProvider initialLang={initialLang}>
-      <App />
+    <LangProvider initialLang={hire ? 'en' : initialLang} syncUrl={!hire}>
+      {hire ? <HirePage /> : <App />}
     </LangProvider>
   </React.StrictMode>
 );

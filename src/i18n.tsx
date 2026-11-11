@@ -23,6 +23,7 @@ const en = {
     chipDirect: 'You talk to the developer',
     chipOwn: 'The code is yours',
     fullTime: 'Hiring for a senior role? See my',
+    hireProfile: 'Hiring profile',
     trustedBy: "Teams I've shipped products with",
     heroCardBeta: '3 apps in beta',
     certIssued: 'Anthropic · Issued Oct 2026',
@@ -41,7 +42,7 @@ const en = {
     servicesTitle: 'From first sketch to the stores, and after',
     askAbout: 'Get a quote for this',
     statYears: 'years of experience',
-    statUsers: '1K+',
+    statUsers: '50K+',
     statApps: "users on apps I've built",
     statStores: 'of the code is yours',
     statDirect: 'direct contact, no middlemen',
@@ -49,6 +50,9 @@ const en = {
     processTitle: 'How we work together',
     processSub: 'You work directly with the person who designs and codes your product. No agencies, no account managers, no telephone game.',
     step: 'Step',
+    clientLabel: 'Client',
+    present: 'Present',
+    myRole: 'My role',
     experienceEyebrow: 'EXPERIENCE',
     experienceTitle: 'Built for banks, global brands and startups',
     experienceSub: "Since 2018 I have worked with consultancies, banks and global brands, from enterprise .NET systems to Flutter apps used by thousands. Today I lead mobile and Rust development as a Senior Fullstack Developer, and I'm a Claude Certified Architect (Anthropic).",
@@ -92,6 +96,7 @@ const es: typeof en = {
     chipDirect: 'Hablas con quien programa',
     chipOwn: 'El código es tuyo',
     fullTime: '¿Contratas para un rol senior? Mira mi',
+    hireProfile: 'Perfil para reclutadores',
     trustedBy: 'Equipos con los que he lanzado productos',
     heroCardBeta: '3 apps en beta',
     certIssued: 'Anthropic · Emitida en oct 2026',
@@ -110,7 +115,7 @@ const es: typeof en = {
     servicesTitle: 'Del primer boceto a las tiendas, y después',
     askAbout: 'Cotizar esto',
     statYears: 'años de experiencia',
-    statUsers: '1K+',
+    statUsers: '50K+',
     statApps: 'usuarios en apps que he creado',
     statStores: 'del código es tuyo',
     statDirect: 'contacto directo, sin intermediarios',
@@ -118,6 +123,9 @@ const es: typeof en = {
     processTitle: 'Cómo trabajamos juntos',
     processSub: 'Trabajas directamente con quien diseña y programa tu producto. Sin agencias, sin intermediarios, sin teléfono roto.',
     step: 'Paso',
+    clientLabel: 'Cliente',
+    present: 'Actualidad',
+    myRole: 'Mi rol',
     experienceEyebrow: 'EXPERIENCIA',
     experienceTitle: 'Construyendo para bancos, marcas globales y startups',
     experienceSub: 'Desde 2018 he trabajado con consultoras, bancos y marcas globales, desde sistemas empresariales en .NET hasta apps en Flutter usadas por miles. Hoy lidero desarrollo móvil y en Rust como Senior Fullstack Developer, y soy Claude Certified Architect (Anthropic).',
@@ -147,16 +155,18 @@ const STRINGS = { en, es }
 
 const LangContext = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: typeof en } | null>(null)
 
-export function LangProvider({ initialLang, children }: { initialLang: Lang; children: ReactNode }) {
+// syncUrl=false keeps the URL, title and meta tags as rendered (used by the English-only /hire page).
+export function LangProvider({ initialLang, syncUrl = true, children }: { initialLang: Lang; syncUrl?: boolean; children: ReactNode }) {
     const [lang, setLang] = useState<Lang>(initialLang)
     useEffect(() => {
+        if (!syncUrl) return
         document.documentElement.lang = lang
         document.title = SEO[lang].title
         document.querySelector('meta[name="description"]')?.setAttribute('content', SEO[lang].description)
         document.querySelector('link[rel="canonical"]')?.setAttribute('href', SITE_URL + LANG_PATH[lang])
         if (location.pathname !== LANG_PATH[lang]) history.pushState(null, '', LANG_PATH[lang] + location.hash)
         try { localStorage.setItem('lang', lang) } catch { /* storage blocked */ }
-    }, [lang])
+    }, [lang, syncUrl])
     useEffect(() => {
         const onPop = () => setLang(langFromPath(location.pathname))
         window.addEventListener('popstate', onPop)

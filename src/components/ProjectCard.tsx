@@ -37,6 +37,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <h3 className='font-bold font-mono text-xl text-chocolate group-hover:text-tangerine transition-colors duration-300'>{project.name}</h3>
         <p className='text-sm text-chocolate/70 leading-relaxed'>{project.description[lang]}</p>
+        {project.role && (
+          <p className='text-sm leading-relaxed border-l-2 border-primary pl-3 text-chocolate/85'>
+            <span className='font-semibold text-chocolate'>{t.myRole}:</span> {project.role[lang]}
+          </p>
+        )}
         {(beta?.android || beta?.ios) && (
           <div className='mt-auto flex flex-wrap gap-2 pt-2'>
             {beta.android && <a href={beta.android} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-2 rounded-full bg-chocolate text-white text-sm font-semibold px-4 py-2 hover:bg-chocolate/90'><FaAndroid />{t.joinAndroid}</a>}

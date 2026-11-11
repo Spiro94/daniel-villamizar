@@ -1,0 +1,213 @@
+% -- Encoding UTF-8 without BOM
+% -- XeLaTeX => PDF (BIBER)
+% -- Overleaf project: needs cv-style.cls and Dani-2024.jpg next to this file.
+% -- After compiling, replace public/daniel-villamizar-cv.pdf with the output.
+
+\documentclass[english]{cv-style}     % Add 'print' as an option into the square bracket to remove colours from this template for printing.
+                                      % Add 'espanol' as an option into the square bracket to change the date format of the Last Updated Text
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Daniel Villamizar - Resume},
+    pdfauthor={Daniel Villamizar},
+    pdfsubject={CV/Resume},
+    }
+
+% Sidebar shared by both pages
+\newcommand{\cvaside}{%
+\begin{aside}
+\section{-}
+\includegraphics[width=4cm]{Dani-2024.jpg}
+%
+\section{contact info}
+~
+{\scalebox{.8}[1.0]{danieljosevillamizar@gmail.com}}
+~
+Bucaramanga, Colombia
+Remote (UTC-5)
+%
+\section{website}
+{\scalebox{.8}[1.0]{\url{https://www.danielvillamizar.dev}}}
+\section{LinkedIn}
+{\scalebox{.5}[1.0]{\url{https://www.linkedin.com/in/danielvillamizar94/}}}
+\section{GitHub}
+{\scalebox{.8}[1.0]{\url{https://github.com/Spiro94}}}
+%
+\section{languages}
+Spanish (native),
+English (professional working proficiency, B2)
+%
+\section{programming languages}
+{\color{red} $\varheartsuit$} Dart, TypeScript, Rust, C\#, JavaScript, SQL
+%
+\section{frameworks}
+Flutter, Bloc, React, Node.js, .NET, Axum, Actix Web, Tauri
+%
+\section{cloud \& data}
+AWS, Google Cloud, Firebase, Supabase, PostgreSQL, SQL Server, Oracle PL/SQL
+%
+\section{AI}
+Claude, OpenAI, Google ADK
+\end{aside}}
+
+\begin{document}
+
+\header{Daniel }{Villamizar}
+\lastupdated
+
+\cvaside
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+\vspace{0.3cm}
+\section{SUMMARY}
+  \vspace{-0.2cm}
+\textbf{Senior Fullstack Engineer} with 8+ years of experience building products across mobile, web and backend: Flutter apps for \textbf{Bancolombia}, \textbf{Byrider} and \textbf{Panasonic (Yohana)}, React and TypeScript on the web, and a local-first Rust core (Axum, Actix Web, Tauri) shared across mobile and desktop. Redesigned and migrated Byrider's customer app from Xamarin to Flutter for 50K+ customers and built components for Bancolombia's enterprise design system. \textbf{Claude Certified Architect} (Anthropic) shipping production AI features with Claude and OpenAI.
+
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{experience}
+  \vspace{-0.2cm}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+  {\scalebox{.8}[1.0]{2022--Present}}
+  {Gorilla Logic}
+  {Remote}
+  {\jobtitle{Senior Fullstack Engineer}\\\\
+  - Redesigned and migrated \textbf{Byrider}'s customer app (MyByrider) from Xamarin to Flutter, used by 50K+ customers to manage auto loans, make payments and set up autopay on iOS and Android.
+
+  - Built Flutter features for \textbf{Yohana (Panasonic)}, a family concierge app, integrating AI services (OpenAI, Claude, Google ADK) on Google Cloud.
+
+  - Developed a local-first core library in Rust (Axum, Actix Web) and packaged it into cross-platform desktop apps with Tauri, sharing business logic across mobile and desktop.
+
+  - Mentored developers on Flutter architecture and code review practices, working closely with product, design and backend teams.
+ }
+  \\
+\entry
+  {\scalebox{.8}[1.0]{2021--2022}}
+  {Amaris Consulting}
+  {Remote}
+  {\jobtitle{Senior Flutter Engineer (Consultant)}\\\\
+  - Designed, built and maintained the \href{https://play.google.com/store/apps/details?id=com.kubo.leal}{\textbf{Leal App}} for iOS and Android with Flutter and Firebase, where users earn points and cashback from in-store purchases.
+
+  - Integrated the app with backend services together with the server-side team, and refined requirements with product and design.
+ }
+  \\
+\entry
+  {\scalebox{.8}[1.0]{2020--2021}}
+  {Capgemini}
+  {Remote}
+  {\jobtitle{Senior Software Engineer}\\\\
+  - Built reusable UI components, a shared design language and documented guidelines for \textbf{Bancolombia}'s enterprise design system, used across multiple product teams.
+
+  - Implemented complex interfaces and animations for \href{https://play.google.com/store/apps/details?id=co.com.tcs.bancolombia.bancaalamano}{\textbf{Bancolombia Ahorro a La Mano}}, a fee-free, 100\% mobile savings account.
+
+  - Evaluated and introduced new frameworks and practices to improve app performance and scalability.
+  }
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+\clearpage
+\header{Daniel }{Villamizar}
+\lastupdated
+
+\cvaside
+
+\vspace{0.3cm}
+\section{experience}
+  \vspace{-0.2cm}
+\begin{entrylist}
+%------------------------------------------------
+\\
+\entry
+  {\scalebox{.8}[1.0]{2020}}
+  {RENTEC Rentabilidad y Tecnología SAS}
+  {Remote}
+  {\jobtitle{Software Engineer}\\\\
+  - Developed .NET MVC web features and SQL Server database logic.
+
+  - Took part in code reviews to improve code quality and maintainability.
+  }
+  \\
+\entry
+  {\scalebox{.8}[1.0]{2019--2021}}
+  {IncubApp}
+  {Santander, Colombia}
+  {\jobtitle{Mobile Developer (Flutter)}\\\\
+  - Built screens, navigation and interactions in Flutter from UX/UI designs.
+
+  - Integrated AWS Cognito authentication and AWS Lambda functions.
+  }
+  \\
+\entry
+  {\scalebox{.8}[1.0]{2018--2020}}
+  {Sistemas y Computadores S.A.}
+  {Santander, Colombia}
+  {\jobtitle{Software Engineer (.NET)}\\\\
+  - Built web and desktop applications with .NET and Oracle, including complex PL/SQL queries and stored procedures.
+
+  - Gathered business requirements with clients and translated them into technical specifications.
+  }
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+% INDEPENDENT PROJECTS
+%----------------------------------------------------------------------------------------
+\section{independent projects}
+  \vspace{-0.2cm}
+\begin{entrylist}
+\entry
+  {\scalebox{.8}[1.0]{Present}}
+  {Habit Heroes, CitaMente, Cuentitos}
+  {Founder}
+  {\jobtitle{Founder \& Mobile Engineer}\\\\
+  - Designed, built and operate three apps in closed beta on Google Play and TestFlight (Flutter, Bloc, Supabase, PostgreSQL).
+
+  - Shipped AI features end to end: voice recording, photo OCR and data extraction for medical appointments, and AI-generated children's stories, using OpenAI.
+  }
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+% CERTIFICATIONS & EDUCATION
+%----------------------------------------------------------------------------------------
+\section{certifications}
+  \vspace{-0.2cm}
+\begin{entrylist}
+\entry
+{\scalebox{.8}[1.0]{2026}}
+{\href{https://www.credly.com/badges/07c08f2a-ce0d-4392-bf0b-da6e9246d14d}{Claude Certified Architect -- Foundations}}
+{Anthropic}
+{}
+\end{entrylist}
+
+\section{education}
+  \vspace{-0.2cm}
+\begin{entrylist}
+\entry
+{\scalebox{.8}[1.0]{2011--2017}}
+{B.S. in Systems Engineering}
+{Universidad Industrial de Santander}
+{}
+\end{entrylist}
+
+\section{extracurricular}
+  \vspace{-0.2cm}
+\begin{entrylist}
+\entry
+{\scalebox{.8}[1.0]{2016--2017}}
+{Work \& Travel Program}
+{Winthrop, WA, USA}
+{Two summers in a customer-facing role in the United States, building conversational English and adaptability.}
+\end{entrylist}
+
+\end{document}

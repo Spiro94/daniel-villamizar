@@ -1,4 +1,4 @@
-import { ArrowRight, Check, FileText } from 'lucide-react'
+import { ArrowRight, BriefcaseBusiness, Check, FileText, Mail } from 'lucide-react'
 import { FaAndroid, FaGithub, FaLinkedin } from 'react-icons/fa'
 import CuentitosHome from '../assets/cuentitos-home.webp'
 import Daniel from '../assets/daniel.webp'
@@ -7,12 +7,14 @@ import Button from './Button'
 import CertificationCard from './CertificationCard'
 import { useLang } from '../i18n'
 import { APP_CONSTANTS, whatsappUrl } from '../utils/constants'
+import { HIRE_PATH } from '../seo'
 
 const NAMES = ['Panasonic · Yohana', 'Bancolombia', 'Byrider', 'Leal', 'Gorilla Logic', 'Capgemini']
 const HIRE_LINKS = [
     { href: APP_CONSTANTS.cvUrl, label: 'CV', Icon: FileText },
     { href: APP_CONSTANTS.linkedInUrl, label: 'LinkedIn', Icon: FaLinkedin },
     { href: APP_CONSTANTS.githubUrl, label: 'GitHub', Icon: FaGithub },
+    { href: `mailto:${APP_CONSTANTS.email}`, label: 'Email', Icon: Mail },
 ]
 
 export default function MainSection() {
@@ -63,6 +65,9 @@ export default function MainSection() {
 
                         <p className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 text-sm text-chocolate/70">
                             {t.fullTime}
+                            <a href={HIRE_PATH} className="inline-flex items-center gap-1 font-semibold text-primary underline-offset-4 hover:underline">
+                                <BriefcaseBusiness className="w-4 h-4" />{t.hireProfile}
+                            </a>
                             {HIRE_LINKS.map(({ href, label, Icon }) => (
                                 <a key={label} href={href} target='_blank' rel='noopener noreferrer' className="inline-flex items-center gap-1 font-semibold text-chocolate underline-offset-4 hover:underline hover:text-primary">
                                     <Icon className="w-4 h-4" />{label}

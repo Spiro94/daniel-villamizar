@@ -13,6 +13,8 @@ interface Project {
     thumbnail?: string;
     technologies: string[];
     description: L;
+    // Client work only: what I did and the result.
+    role?: L;
     // Only set for my own apps in beta. Empty link = button hidden.
     beta?: { android?: string; ios?: string };
 }
@@ -52,6 +54,10 @@ const PROJECTS: Project[] = [
         name: "Yohana (Panasonic)",
         thumbnail: Yohana,
         technologies: ["Flutter", "Dart", "Android", "iOS", "OpenAI", "Claude", "ADK", "Google Cloud"],
+        role: {
+            en: "Built Flutter features and AI integrations (OpenAI, Claude, Google ADK) as a Senior Engineer at Gorilla Logic.",
+            es: "Desarrollé funcionalidades en Flutter e integraciones de IA (OpenAI, Claude, Google ADK) como Senior Engineer en Gorilla Logic.",
+        },
         description: {
             en: "Family concierge app that pairs busy families with a dedicated team of professionals to handle daily to-dos, from meal planning to travel",
             es: "App de concierge familiar que apoya a familias ocupadas con un equipo dedicado de profesionales, desde planear comidas hasta organizar viajes",
@@ -61,6 +67,10 @@ const PROJECTS: Project[] = [
         name: "MyByrider (Byrider)",
         thumbnail: Byrider,
         technologies: ["Flutter", "Dart", "Xamarin", "iOS", "Android"],
+        role: {
+            en: "Redesigned the app and migrated it from Xamarin to Flutter for iOS and Android, at Gorilla Logic.",
+            es: "Rediseñé la app y la migré de Xamarin a Flutter para iOS y Android, en Gorilla Logic.",
+        },
         description: {
             en: "Redesigned and ported from Xamarin to Flutter: Byrider's car-ownership app where 50K+ customers manage their loans, make payments and set up autopay",
             es: "Rediseño y migración de Xamarin a Flutter de la app de Byrider, donde más de 50K clientes gestionan su crédito de vehículo, hacen pagos y programan pagos automáticos",
@@ -70,6 +80,10 @@ const PROJECTS: Project[] = [
         name: "Ahorro a la Mano (Bancolombia)",
         thumbnail: AhorroALaMano,
         technologies: ["Flutter", "Dart", "Firebase", "iOS", "Android"],
+        role: {
+            en: "Built complex interfaces and animations with Bancolombia's enterprise design system, which I helped build, at Capgemini.",
+            es: "Construí interfaces y animaciones complejas con el design system empresarial de Bancolombia, que ayudé a construir, en Capgemini.",
+        },
         description: {
             en: "Bancolombia's 100% mobile savings account with no maintenance fees: pay bills, transfer money and receive your salary straight from your phone",
             es: "Cuenta de ahorros 100% móvil de Bancolombia, sin cuota de manejo: los usuarios pagan facturas, transfieren dinero y reciben su salario desde el celular",
@@ -79,6 +93,10 @@ const PROJECTS: Project[] = [
         name: "Leal App",
         thumbnail: Leal,
         technologies: ["Flutter", "Dart", "Firebase", "iOS", "Android"],
+        role: {
+            en: "Designed, built and maintained the iOS and Android app with Flutter and Firebase, at Amaris Consulting.",
+            es: "Diseñé, desarrollé y mantuve la app para iOS y Android con Flutter y Firebase, en Amaris Consulting.",
+        },
         description: {
             en: "Loyalty rewards platform where users earn points and cashback from purchases at physical stores, redeemable for prizes and discounts",
             es: "Plataforma de fidelización donde los usuarios ganan puntos y cashback por compras en tiendas físicas, canjeables por premios y descuentos",
