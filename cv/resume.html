@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Daniel Villamizar — Resume</title>
+<meta name="author" content="Daniel Villamizar">
+<meta name="description" content="Resume of Daniel Villamizar, Senior Mobile Engineer">
+<!--
+  Source of public/daniel-villamizar-cv.pdf. Edit here, then run:
+    node scripts/build-cv.mjs            (writes the public PDF; refuses while double-bracket placeholders remain)
+    node scripts/build-cv.mjs --draft x.pdf  (draft with placeholders highlighted)
+  Rules (ATS): one column, plain text, no photo, no tables/icons, month/year dates,
+  reverse chronological order, impact-first bullets, global job titles.
+-->
+<style>
+  @page { size: Letter; margin: 0.55in 0.6in; }
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 10.2pt; line-height: 1.35; color: #111; margin: 0; }
+  h1 { font-size: 20pt; margin: 0; letter-spacing: 0.5px; }
+  .headline { font-size: 11pt; font-weight: bold; margin: 2px 0 4px; }
+  .contact { font-size: 9.6pt; margin: 0 0 6px; }
+  a { color: #111; text-decoration: none; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #111; margin: 12px 0 5px; padding-bottom: 2px; }
+  p { margin: 0 0 4px; }
+  ul { margin: 2px 0 0; padding-left: 16px; }
+  li { margin: 0 0 2px; }
+  .job { margin: 0 0 8px; break-inside: avoid; }
+  .row { display: flex; justify-content: space-between; gap: 12px; }
+  .row b { font-size: 10.4pt; }
+  .meta { font-style: italic; }
+  .skills p { margin: 0 0 2px; }
+  mark.todo { background: #ffe66d; }
+</style>
+</head>
+<body>
+
+<h1>Daniel Villamizar</h1>
+<p class="headline">Senior Mobile Engineer | Flutter, Dart, Rust, React | Design Systems &amp; Local-first Apps | Claude Certified Architect</p>
+<p class="contact">
+  Colombia (Remote, UTC−5) · danieljosevillamizar@gmail.com ·
+  <a href="https://www.linkedin.com/in/danielvillamizar94/">linkedin.com/in/danielvillamizar94</a> ·
+  <a href="https://github.com/Spiro94">github.com/Spiro94</a> ·
+  <a href="https://www.danielvillamizar.dev">danielvillamizar.dev</a>
+</p>
+
+<h2>Summary</h2>
+<p>Senior Mobile Engineer with 8+ years of experience building cross-platform products with Flutter and Dart for banking, auto finance, loyalty and consumer brands, including Bancolombia, Byrider and Panasonic (Yohana). Redesigned and migrated Byrider's customer app from Xamarin to Flutter for 50K+ customers, built components for Bancolombia's enterprise design system, and developed a local-first Rust core (Axum, Actix Web, Tauri) shared across mobile and desktop. Claude Certified Architect (Anthropic) shipping production AI features with Claude and OpenAI.</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <p><b>Mobile:</b> Flutter, Dart, Bloc, iOS, Android, App Store &amp; Google Play releases, TestFlight</p>
+  <p><b>Languages:</b> Dart, TypeScript, JavaScript, Rust, C#, SQL, Java</p>
+  <p><b>Web &amp; Backend:</b> React, Node.js, .NET (MVC, WCF), Rust (Axum, Actix Web, Tauri), REST APIs</p>
+  <p><b>Cloud &amp; Data:</b> AWS (Cognito, Lambda), Google Cloud, Firebase, Supabase, PostgreSQL, SQL Server, Oracle PL/SQL</p>
+  <p><b>AI:</b> Claude, OpenAI, Google ADK, LLM integrations, OCR and voice pipelines</p>
+  <p><b>Practices:</b> Design Systems, Clean Architecture, Code Review, Mentoring, Agile/Scrum</p>
+</div>
+
+<h2>Professional Experience</h2>
+
+<div class="job">
+  <div class="row"><b>Gorilla Logic — Senior Software Engineer (Mobile &amp; Rust)</b><span><mark class="todo">[[MM]]</mark>/2022 – Present</span></div>
+  <div class="meta">Remote</div>
+  <ul>
+    <li>Redesigned and migrated Byrider's customer app (MyByrider) from Xamarin to Flutter, used by 50K+ customers to manage auto loans, make payments and set up autopay on iOS and Android. <mark class="todo">[[Add a measurable result: rating, crash-free rate, release time, etc.]]</mark></li>
+    <li>Built Flutter features for Yohana (Panasonic), a family concierge app, integrating AI services (OpenAI, Claude, Google ADK) on Google Cloud.</li>
+    <li>Developed a local-first core library in Rust (Axum, Actix Web) and packaged it into cross-platform desktop apps with Tauri, sharing business logic across mobile and desktop.</li>
+    <li>Mentored developers on Flutter architecture and code review practices, working closely with product, design and backend teams.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><b>Daniel Villamizar SAS — Founder &amp; Mobile Engineer</b><span><mark class="todo">[[MM/YYYY]]</mark> – Present</span></div>
+  <div class="meta">Remote · Independent product studio</div>
+  <ul>
+    <li>Designed, built and operate three apps in closed beta on Google Play and TestFlight: Habit Heroes, CitaMente and Cuentitos (Flutter, Bloc, Supabase, PostgreSQL).</li>
+    <li>Shipped AI features end to end: voice recording, photo OCR and structured data extraction for medical appointments (CitaMente), and AI-generated children's stories (Cuentitos), using OpenAI.</li>
+    <li>Own the full lifecycle: product design, backend, CI, store submissions and post-launch support.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><b>Amaris Consulting — Senior Flutter Engineer (Consultant)</b><span><mark class="todo">[[MM]]</mark>/2021 – <mark class="todo">[[MM]]</mark>/2022</span></div>
+  <div class="meta">Remote · Client: Leal</div>
+  <ul>
+    <li>Designed, built and maintained the Leal loyalty app for iOS and Android with Flutter and Firebase, where users earn points and cashback from in-store purchases. <mark class="todo">[[Add scale: users, stores or transactions]]</mark></li>
+    <li>Integrated the app with backend services together with the server-side team, and refined requirements with product and design.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><b>Capgemini — Senior Software Engineer</b><span><mark class="todo">[[MM]]</mark>/2020 – <mark class="todo">[[MM]]</mark>/2021</span></div>
+  <div class="meta">Remote · Client: Bancolombia</div>
+  <ul>
+    <li>Built reusable UI components, a shared design language and documented guidelines for Bancolombia's enterprise design system, used across multiple product teams.</li>
+    <li>Implemented complex interfaces and animations for Ahorro a la Mano, Bancolombia's fee-free, 100% mobile savings account.</li>
+    <li>Evaluated and introduced new frameworks and practices to improve app performance and scalability.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><b>RENTEC Rentabilidad y Tecnología — Software Engineer</b><span><mark class="todo">[[MM]]</mark>/2020 – <mark class="todo">[[MM]]</mark>/2020</span></div>
+  <div class="meta">Remote</div>
+  <ul>
+    <li>Developed .NET MVC web features and SQL Server database logic, and took part in code reviews to improve maintainability.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><b>IncubApp — Mobile Developer (Flutter)</b><span><mark class="todo">[[MM]]</mark>/2019 – <mark class="todo">[[MM]]</mark>/2021</span></div>
+  <div class="meta">Bucaramanga, Colombia</div>
+  <ul>
+    <li>Built screens, navigation and interactions in Flutter from UX/UI designs.</li>
+    <li>Integrated AWS Cognito authentication and AWS Lambda functions.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="row"><b>Sistemas y Computadores S.A. — Software Engineer (.NET)</b><span><mark class="todo">[[MM]]</mark>/2018 – <mark class="todo">[[MM]]</mark>/2020</span></div>
+  <div class="meta">Bucaramanga, Colombia</div>
+  <ul>
+    <li>Built web and desktop applications with .NET and Oracle, including complex PL/SQL queries and stored procedures.</li>
+    <li>Gathered business requirements with clients and translated them into technical specifications.</li>
+  </ul>
+</div>
+
+<h2>Certifications</h2>
+<p>Claude Certified Architect – Foundations, Anthropic, Oct 2026 · <a href="https://www.credly.com/badges/07c08f2a-ce0d-4392-bf0b-da6e9246d14d">Verify on Credly</a></p>
+
+<h2>Education</h2>
+<p>B.S. in Systems Engineering, Universidad Industrial de Santander, Colombia, 2017</p>
+
+<h2>Languages</h2>
+<p>Spanish (native) · English (professional working proficiency, B2; two summers on a Work &amp; Travel program in Winthrop, WA, USA, 2016–2017)</p>
+
+</body>
+</html>
